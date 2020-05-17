@@ -1,6 +1,8 @@
 <template>
     <Layout>
-
+        <div class="page-content">
+            Projects!
+        </div>
     </Layout>
 </template>
 
@@ -11,3 +13,7 @@
         }
     }
 </script>
+
+<style lang="scss" scoped>
+    @import './styles/projects';
+</style>

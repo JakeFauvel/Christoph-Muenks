@@ -1,13 +1,19 @@
 <template>
-  <Layout>
-
-  </Layout>
+    <Layout>
+        <div class="page-content">
+            About!
+        </div>
+    </Layout>
 </template>
 
 <script>
-export default {
-  metaInfo: {
-    title: 'Christoph Münks - About'
-  }
-}
+    export default {
+        metaInfo: {
+            title: 'Christoph Münks - About'
+        }
+    }
 </script>
+
+<style lang="scss" scoped>
+    @import './styles/about';
+</style>
