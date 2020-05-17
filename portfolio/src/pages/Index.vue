@@ -13,7 +13,10 @@ export default {
 </script>
 
 <style>
-.home-links a {
-  margin-right: 1rem;
-}
+  html, body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
 </style>
