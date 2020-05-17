@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import Lang from '~/lang.json'
+    import Lang from '~/lang/index.json'
 
     export default {
         metaInfo: {

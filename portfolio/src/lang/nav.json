@@ -13,13 +13,5 @@
     "home": "startseite",
     "products": "produkte",
     "projects": "projekte"
-  },
-
-  "index-en": {
-    "intro": "I AM THE HOMEPAGE CONTENT!"
-  },
-
-  "index-de": {
-    "intro": "ICH BIN DER HAUSHALTSINHALT!"
   }
 }
