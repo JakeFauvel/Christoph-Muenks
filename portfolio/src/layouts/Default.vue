@@ -9,11 +9,13 @@
                 </div>
 
                 <div class="right">
-                    <g-link class="nav__link" to="/projects">{{ lang['nav-en'].projects.toUpperCase() }}</g-link>
-                    <g-link class="nav__link" to="/products/">{{ lang['nav-en'].products.toUpperCase() }}</g-link>
-                    <g-link class="nav__link" to="/about/">{{ lang['nav-en'].about.toUpperCase() }}</g-link>
-                    <g-link class="nav__link" to="/contact/">{{ lang['nav-en'].contact.toUpperCase() }}</g-link>
-                    <switcher class="switcher"></switcher>
+                    <div class="nav-item-container">
+                        <g-link class="nav__link" to="/projects">{{ lang[langPath].projects.toUpperCase() }}</g-link>
+                        <g-link class="nav__link" to="/products/">{{ lang[langPath].products.toUpperCase() }}</g-link>
+                        <g-link class="nav__link" to="/about/">{{ lang[langPath].about.toUpperCase() }}</g-link>
+                        <g-link class="nav__link" to="/contact/">{{ lang[langPath].contact.toUpperCase() }}</g-link>
+                        <switcher></switcher>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -43,11 +45,26 @@
 
         data: function () {
             return {
-                lang: Lang
+                lang: Lang,
+                activeLanguage: 'en',
+                langPath: 'nav-en'
             }
         },
 
+        mounted() {
+            this.setLanguage();
+            window.addEventListener('langChanged', this.setLanguage);
+        },
+
         methods: {
+            setLanguage() {
+                if (localStorage.getItem("language") !== null) {
+                    this.activeLanguage = localStorage.getItem("language");
+                }
+
+                this.langPath = 'nav-' + this.activeLanguage;
+            },
+
             onHamburgerClick() {
                 this.hamburgerClicked = !this.hamburgerClicked;
                 if (this.hamburgerClicked) {
