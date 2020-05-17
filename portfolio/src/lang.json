@@ -1,0 +1,17 @@
+{
+  "nav-en": {
+    "about": "about",
+    "contact": "contact",
+    "home": "home",
+    "products": "products",
+    "projects": "projects"
+  },
+
+  "nav-de": {
+    "about": "über",
+    "contact": "kontakt",
+    "home": "startseite",
+    "products": "produkte",
+    "projects": "projekte"
+  }
+}

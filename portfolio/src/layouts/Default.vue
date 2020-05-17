@@ -9,10 +9,11 @@
                 </div>
 
                 <div class="right">
-                    <g-link class="nav__link" to="/projects">PROJECTS</g-link>
-                    <g-link class="nav__link" to="/products/">PRODUCTS</g-link>
-                    <g-link class="nav__link" to="/about/">ABOUT</g-link>
-                    <g-link class="nav__link" to="/contact/">CONTACT</g-link>
+                    <g-link class="nav__link" to="/projects">{{ lang['nav-en'].projects.toUpperCase() }}</g-link>
+                    <g-link class="nav__link" to="/products/">{{ lang['nav-en'].products.toUpperCase() }}</g-link>
+                    <g-link class="nav__link" to="/about/">{{ lang['nav-en'].about.toUpperCase() }}</g-link>
+                    <g-link class="nav__link" to="/contact/">{{ lang['nav-en'].contact.toUpperCase() }}</g-link>
+                    <switcher class="switcher"></switcher>
                 </div>
             </nav>
         </header>
@@ -23,18 +24,27 @@
 
 <static-query>
     query {
-    metadata {
-    siteName
-    }
+        metadata {
+            siteName
+        }
     }
 </static-query>
 
 <script>
     import Hamburger from '~/components/nav/Hamburger.vue'
+    import Switcher from '~/components/nav/Switcher.vue'
+    import Lang from '~/lang.json'
 
     export default {
         components: {
-            Hamburger
+            Hamburger,
+            Switcher
+        },
+
+        data: function () {
+            return {
+                lang: Lang
+            }
         },
 
         methods: {
