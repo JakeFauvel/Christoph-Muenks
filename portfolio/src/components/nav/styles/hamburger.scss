@@ -1,0 +1,96 @@
+$near-black: #070707;
+$white: #FFF;
+
+.menu-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  .menu-text {
+    font-family: 'Nobel-Regular', sans-serif;
+  }
+}
+
+.hamburger-container {
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  z-index: 2;
+}
+
+.line-one, .line-two {
+  background: $near-black;
+  border-radius: 6px;
+  width: 35px;
+  height: 4px;
+  transform-origin: center;
+
+  @media only screen and (min-width: 375px) {
+    width: 40px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: none !important;
+  }
+}
+
+.line-one.open, .line-two.open {
+  background: $near-black;
+}
+
+.menu-text.open {
+  color: $near-black;
+}
+
+.line-two {
+  margin-top: 10px;
+}
+
+.menu-text {
+  font-size: 12px;
+  margin-top: 10px;
+
+  @media only screen and (min-width: 375px) {
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background: $white;
+
+  .nav-item {
+    text-decoration: none;
+    font-family: 'Nobel-Regular', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: $near-black;
+    text-align: center;
+    margin-top: 20px;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 52px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: none !important;
+  }
+}
+
+.menu.closed {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: none;
+}

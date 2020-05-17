@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <div class="page-content">
-            Projects!
+
         </div>
     </Layout>
 </template>

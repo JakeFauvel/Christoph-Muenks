@@ -51,5 +51,8 @@
 </script>
 
 <style lang="scss">
+    // Default styles
     @import './styles/default';
+    // Global fonts
+    @import url("https://use.typekit.net/lvt4ped.css");
 </style>

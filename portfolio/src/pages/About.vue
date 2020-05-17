@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <div class="page-content">
-            About!
+
         </div>
     </Layout>
 </template>
