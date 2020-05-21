@@ -4,11 +4,11 @@
             <h2 class="about-header">{{ lang[langPath].title.toUpperCase() }}</h2>
 
             <p class="about-info-paragraph">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.
+                {{ lang[langPath]['about-para-one'] }}
             </p>
 
             <p class="about-info-paragraph">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
+                {{ lang[langPath]['about-para-two'] }}
             </p>
 
             <img src="../../src/assets/images/about/christoph-hands.png" alt="Blacksmith hands">
@@ -32,10 +32,10 @@
             }
         },
 
-
         mounted() {
             this.setLanguage();
             window.addEventListener('langChanged', this.setLanguage);
+            document.body.style.overflow = 'initial';
         },
 
         methods: {

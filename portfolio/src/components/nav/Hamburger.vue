@@ -5,6 +5,7 @@
             <div ref="lineTwo" class="line-two" :class="{open: hamburgerOpen}"></div>
             <div ref="lineThree" class="line-three" :class="{open: hamburgerOpen}"></div>
         </div>
+
         <div ref="menu" class="menu" :class="{closed: !hamburgerOpen}">
             <a class="nav-item" href="/">
                 <div class="nav-item-underline"></div>
