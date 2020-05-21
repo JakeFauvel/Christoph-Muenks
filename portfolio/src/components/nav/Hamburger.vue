@@ -6,9 +6,21 @@
             <div ref="lineThree" class="line-three" :class="{open: hamburgerOpen}"></div>
         </div>
         <div ref="menu" class="menu" :class="{closed: !hamburgerOpen}">
-            <a v-for="navItem in navItems" :href="navItem.route" class="nav-item">
+            <a class="nav-item" href="/">
                 <div class="nav-item-underline"></div>
-                {{ navItem.label }}
+                {{ lang[langPath].projects.toUpperCase() }}
+            </a>
+            <a class="nav-item" href="/products/">
+                <div class="nav-item-underline"></div>
+                {{ lang[langPath].products.toUpperCase() }}
+            </a>
+            <a class="nav-item" href="/about/">
+                <div class="nav-item-underline"></div>
+                {{ lang[langPath].about.toUpperCase() }}
+            </a>
+            <a class="nav-item" href="/contact/">
+                <div class="nav-item-underline"></div>
+                {{ lang[langPath].contact.toUpperCase() }}
             </a>
             <div class="nav-item-language-underline"></div>
 
@@ -25,36 +37,34 @@
     </div>
 </template>
 <script>
+    import Lang from '~/lang/nav.json';
     let Velocity = require('velocity-animate');
 
     export default {
         data: function () {
             return {
+                lang: Lang,
                 hamburgerOpen: false,
                 isAnimating: false,
                 activeLanguage: 'en',
-                navItems: {
-                    0: {
-                        label: 'PROJECTS',
-                        route: '/'
-                    },
-                    1: {
-                        label: 'PRODUCTS',
-                        route: '/products'
-                    },
-                    2: {
-                        label: 'ABOUT',
-                        route: '/about'
-                    },
-                    3: {
-                        label: 'CONTACT',
-                        route: '/contact'
-                    },
-                }
+                langPath: 'nav-en',
             }
         },
 
+        mounted() {
+            this.setLanguage();
+            window.addEventListener('langChanged', this.setLanguage);
+        },
+
         methods: {
+            setLanguage() {
+                if (localStorage.getItem("language") !== null) {
+                    this.activeLanguage = localStorage.getItem("language");
+                }
+
+                this.langPath = 'nav-' + this.activeLanguage;
+            },
+
             hamburgerClick() {
                 let lineOne = this.$refs.lineOne;
                 let lineTwo = this.$refs.lineTwo;
@@ -91,12 +101,24 @@
                 this.activeLanguage = 'en';
                 localStorage.setItem('language', this.activeLanguage);
                 this.setActiveLanguageStyle();
+                this.langPath = 'nav-' + this.activeLanguage;
+
+                // Dispatch a custom event to listen for
+                // the language change accross the site
+                let event = new CustomEvent("langChanged", {});
+                dispatchEvent(event);
             },
 
             deLanguageSelect() {
                 this.activeLanguage = 'de';
                 localStorage.setItem('language', this.activeLanguage);
                 this.setActiveLanguageStyle();
+                this.langPath = 'nav-' + this.activeLanguage;
+
+                // Dispatch a custom event to listen for
+                // the language change accross the site
+                let event = new CustomEvent("langChanged", {});
+                dispatchEvent(event);
             },
 
             openHamburger(lineOne, lineTwo, lineThree, menu) {

@@ -28,6 +28,7 @@
         mounted() {
             this.setInitialActiveLang();
             this.setSecondary();
+            window.addEventListener('langChanged', this.setLanguage);
         },
 
         methods: {
@@ -39,6 +40,14 @@
                 }
 
                 this.open = !this.open;
+            },
+
+            setLanguage() {
+                if (localStorage.getItem("language") !== null) {
+                    this.activeLanguage = localStorage.getItem("language");
+                }
+
+                this.activeLanguage === 'en' ? this.alternateLanguage = 'de' : this.alternateLanguage = 'en';
             },
 
             alternativeSelected() {
