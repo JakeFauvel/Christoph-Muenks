@@ -18,11 +18,11 @@ $white: #FFF;
   z-index: 2;
 }
 
-.line-one, .line-two {
+.line-one, .line-two, .line-three {
   background: $near-black;
   border-radius: 6px;
   width: 35px;
-  height: 4px;
+  height: 5px;
   transform-origin: center;
 
   @media only screen and (min-width: 375px) {
@@ -42,8 +42,8 @@ $white: #FFF;
   color: $near-black;
 }
 
-.line-two {
-  margin-top: 10px;
+.line-two, .line-three {
+  margin-top: 8px;
 }
 
 .menu-text {
@@ -64,24 +64,42 @@ $white: #FFF;
   opacity: 0;
   position: absolute;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   z-index: 1;
   width: 100%;
   height: 100vh;
   background: $white;
+  top: 130px;
 
   .nav-item {
     text-decoration: none;
-    font-family: 'Nobel-Regular', sans-serif;
-    font-weight: 600;
-    font-size: 40px;
+    font-family: 'Nobel-Book', sans-serif;
+    font-size: 20px;
     color: $near-black;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
 
     @media only screen and (min-width: 768px) {
       font-size: 52px;
     }
+  }
+
+  .nav-item:first-of-type {
+    margin-top: 0;
+
+    > .nav-item-underline {
+      display: none;
+    }
+  }
+
+  .nav-item-underline {
+    width: 64px;
+    height: 1px;
+    background: $near-black;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -23px;
   }
 
   @media only screen and (min-width: 768px) {

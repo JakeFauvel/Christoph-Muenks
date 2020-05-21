@@ -10,7 +10,7 @@
 
                 <div class="right">
                     <div class="nav-item-container">
-                        <g-link class="nav__link" to="/projects">{{ lang[langPath].projects.toUpperCase() }}</g-link>
+                        <g-link class="nav__link" to="/">{{ lang[langPath].projects.toUpperCase() }}</g-link>
                         <g-link class="nav__link" to="/products/">{{ lang[langPath].products.toUpperCase() }}</g-link>
                         <g-link class="nav__link" to="/about/">{{ lang[langPath].about.toUpperCase() }}</g-link>
                         <g-link class="nav__link" to="/contact/">{{ lang[langPath].contact.toUpperCase() }}</g-link>

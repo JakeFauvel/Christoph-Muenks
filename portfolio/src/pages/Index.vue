@@ -29,8 +29,6 @@
 
         methods: {
             setLanguage() {
-                console.log('setLanguage!');
-
                 if (localStorage.getItem("language") !== null) {
                     this.activeLanguage = localStorage.getItem("language");
                 }
