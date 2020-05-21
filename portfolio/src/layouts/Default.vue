@@ -33,9 +33,9 @@
 </static-query>
 
 <script>
-    import Hamburger from '~/components/nav/Hamburger.vue'
-    import Switcher from '~/components/nav/Switcher.vue'
-    import Lang from '~/lang/nav.json'
+    import Hamburger from '~/components/nav/Hamburger.vue';
+    import Switcher from '~/components/nav/Switcher.vue';
+    import Lang from '~/lang/nav.json';
 
     export default {
         components: {

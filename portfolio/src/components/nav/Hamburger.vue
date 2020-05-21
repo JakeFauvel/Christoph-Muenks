@@ -10,17 +10,29 @@
                 <div class="nav-item-underline"></div>
                 {{ navItem.label }}
             </a>
+            <div class="nav-item-language-underline"></div>
+
+            <div class="language-options-container">
+                <a ref="langEN" @click="enLanguageSelect" class="language-option">
+                    EN
+                </a>
+
+                <a ref="langDE" @click="deLanguageSelect" class="language-option">
+                    DE
+                </a>
+            </div>
         </div>
     </div>
 </template>
 <script>
     let Velocity = require('velocity-animate');
 
-    module.exports = {
+    export default {
         data: function () {
             return {
                 hamburgerOpen: false,
                 isAnimating: false,
+                activeLanguage: 'en',
                 navItems: {
                     0: {
                         label: 'PROJECTS',
@@ -48,12 +60,43 @@
                 let lineTwo = this.$refs.lineTwo;
                 let lineThree = this.$refs.lineThree;
                 let menu = this.$refs.menu;
+                this.getActiveLanguage();
 
                 if (!this.hamburgerOpen) {
                     this.openHamburger(lineOne, lineTwo, lineThree, menu);
                 } else {
                     this.closeHamburger(lineOne, lineTwo, lineThree, menu);
                 }
+            },
+
+            getActiveLanguage() {
+                if (localStorage.getItem("language") !== null) {
+                    this.activeLanguage = localStorage.getItem("language");
+                }
+
+                this.setActiveLanguageStyle();
+            },
+
+            setActiveLanguageStyle() {
+                if (this.activeLanguage === 'en') {
+                    if (this.$refs.langDE.classList.contains('active-language')) this.$refs.langDE.classList.remove('active-language');
+                    this.$refs.langEN.classList.add('active-language');
+                } else if (this.activeLanguage) {
+                    if (this.$refs.langEN.classList.contains('active-language')) this.$refs.langEN.classList.remove('active-language');
+                    this.$refs.langDE.classList.add('active-language');
+                }
+            },
+
+            enLanguageSelect() {
+                this.activeLanguage = 'en';
+                localStorage.setItem('language', this.activeLanguage);
+                this.setActiveLanguageStyle();
+            },
+
+            deLanguageSelect() {
+                this.activeLanguage = 'de';
+                localStorage.setItem('language', this.activeLanguage);
+                this.setActiveLanguageStyle();
             },
 
             openHamburger(lineOne, lineTwo, lineThree, menu) {
