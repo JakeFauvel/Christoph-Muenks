@@ -1,5 +1,5 @@
 <template>
-    <div ref="mainLayout" class="layout">
+    <div class="layout">
         <header class="header">
             <hamburger @hamburgerClick="onHamburgerClick"/>
 
@@ -67,10 +67,12 @@
 
             onHamburgerClick() {
                 this.hamburgerClicked = !this.hamburgerClicked;
+                let body = document.body;
+
                 if (this.hamburgerClicked) {
-                    this.$refs.mainLayout.style.overflow = 'hidden';
+                    body.style.overflow = 'hidden';
                 } else {
-                    this.$refs.mainLayout.style.overflow = 'initial';
+                    body.style.overflow = 'initial';
                 }
             }
         }
