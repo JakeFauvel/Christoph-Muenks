@@ -1,29 +1,21 @@
 <template>
-    <Layout>
-        <div class="page-content homepage">
-            <projects></projects>
+    <div ref="projectContainer" class="project-container">
+        <div v-for="project in lang[langPath]" class="image-wrapper">
+            <g-image style="width: 100%" :src="require(`!!assets-loader!@images/${project.src}`)" :alt="project.alt"/>
         </div>
-    </Layout>
+    </div>
 </template>
-
 <script>
-    import Lang from '~/lang/index.json'
-    import Projects from '~/components/project/Projects.vue';
+    import Lang from '~/lang/projects.json';
 
     export default {
-        metaInfo: {
-            title: 'Christoph Münks - Blacksmith'
-        },
-
-        components: {
-            Projects,
-        },
-
         data: function () {
             return {
                 lang: Lang,
+                hamburgerOpen: false,
+                isAnimating: false,
                 activeLanguage: 'en',
-                langContentPath: 'index-en'
+                langPath: 'en',
             }
         },
 
@@ -38,12 +30,11 @@
                     this.activeLanguage = localStorage.getItem("language");
                 }
 
-                this.langContentPath = 'index-' + this.activeLanguage;
+                this.langPath = this.activeLanguage;
             },
         }
     }
 </script>
-
 <style lang="scss" scoped>
-    @import './styles/index';
+    @import './styles/projects';
 </style>

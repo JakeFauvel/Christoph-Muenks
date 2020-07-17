@@ -35,6 +35,7 @@
         mounted() {
             this.setLanguage();
             window.addEventListener('langChanged', this.setLanguage);
+            window.removeEventListener('langChanged', this.setLanguage);
             document.body.style.overflow = 'initial';
         },
 
