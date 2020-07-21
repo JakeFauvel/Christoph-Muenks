@@ -79,6 +79,10 @@ html, body {
 
 .nav__link {
   font-family: 'Nobel-Book', sans-serif;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
   color: $near-black;
   margin-left: 20px;
   font-size: 16px;
@@ -94,12 +98,17 @@ html, body {
   }
 }
 
+.nav__link.active--exact {
+  font-family: 'Nobel', sans-serif;
+  font-weight: normal;
+}
+
 .nav__link:first-of-type {
   margin-left: 0;
 }
 
 .nav__link.main {
-  font-family: 'Nobel-Regular', sans-serif;
+  font-family: 'Nobel', sans-serif;
   color: $near-black;
   font-size: 20px;
   position: relative;

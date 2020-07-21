@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <div class="page-content homepage">
-            <projects></projects>
+            <projects v-for="projectInfo in projectsLang[activeLanguage]" :project="projectInfo"></projects>
         </div>
     </Layout>
 </template>
@@ -9,6 +9,7 @@
 <script>
     import Lang from '~/lang/index.json'
     import Projects from '~/components/project/Projects.vue';
+    import ProjectsLang from '~/lang/projects.json';
 
     export default {
         metaInfo: {
@@ -22,8 +23,9 @@
         data: function () {
             return {
                 lang: Lang,
+                projectsLang: ProjectsLang,
                 activeLanguage: 'en',
-                langContentPath: 'index-en'
+                langContentPath: 'index-en',
             }
         },
 

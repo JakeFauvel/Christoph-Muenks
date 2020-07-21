@@ -1,5 +1,6 @@
 .project-container {
   padding: 0 5%;
+  margin-bottom: 5%;
   position: relative;
   @media only screen and (min-width: 1280px) {
     padding: 0 10%;
@@ -10,13 +11,16 @@
   }
 
   .overlayText {
-    width: inherit;
+    width: calc(90% - 50px);
     position: absolute;
     bottom: 0;
     padding: 25px;
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     background-color: rgba(255, 255, 255, 0.41);
+    @media only screen and (min-width: 1280px) {
+      width: calc(80% - 50px);
+    }
   }
 
   .fade-enter-active, .fade-leave-active {
