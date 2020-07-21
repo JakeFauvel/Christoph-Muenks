@@ -8,6 +8,10 @@
 
   .image-wrapper {
     width: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .overlayText {

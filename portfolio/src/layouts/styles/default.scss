@@ -88,9 +88,19 @@ html, body {
   font-size: 16px;
   text-decoration: none;
   z-index: 2;
+  transition: font-size 0.3s ease-in-out;
+
+  &:hover {
+    font-size: 17px;
+    transition: font-size 0.3s ease-in-out;
+  }
 
   @media only screen and (min-width: 1024px) {
     font-size: 24px;
+
+    &:hover {
+      font-size: 25px;
+    }
   }
 
   @media only screen and (max-width: 767px) {
@@ -113,13 +123,27 @@ html, body {
   font-size: 20px;
   position: relative;
   margin-left: 0;
+  font-weight: normal;
+  transition: font-size 0.3s ease-in-out;
+  &:hover {
+    font-size: 22px;
+    transition: font-size 0.3s ease-in-out;
+  }
 
   @media only screen and (min-width: 768px) {
     font-size: 22px;
+
+    &:hover {
+      font-size: 24px;
+    }
   }
 
   @media only screen and (min-width: 820px) {
     font-size: 24px;
+
+    &:hover {
+      font-size: 26px;
+    }
   }
 
   @media only screen and (max-width: 768px) {
@@ -128,6 +152,10 @@ html, body {
 
   @media only screen and (min-width: 1280px) {
     font-size: 36px;
+
+    &:hover {
+      font-size: 38px;
+    }
   }
 }
 

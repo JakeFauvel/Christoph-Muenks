@@ -2,7 +2,7 @@
     <div @click="onSelectedClick" ref="dropdownContainer" class="dropdown-container">
         <div class="selected-language">
             <span ref="activeLangueSpan">{{ activeLanguage.toUpperCase() }}</span>
-            <dropdown-icon ref="dropdownIcon"></dropdown-icon>
+            <dropdown-icon :class="{'rotate': open}" ref="dropdownIcon"></dropdown-icon>
         </div>
 
         <div @click="alternativeSelected" class="alternative-language">
