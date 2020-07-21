@@ -1,7 +1,10 @@
 <template>
     <div ref="projectContainer" class="project-container">
-        <div v-for="project in lang[langPath]" class="image-wrapper">
+        <div v-for="project in lang[langPath]" @mouseover="showOverlay" @mouseleave="hideOverlay" class="image-wrapper">
             <g-image style="width: 100%" :src="require(`!!assets-loader!@images/${project.src}`)" :alt="project.alt"/>
+            <transition name="fade">
+                <div v-if="overlayState" ref="overlayText" class="overlayText">{{ project['short-description'] }}</div>
+            </transition>
         </div>
     </div>
 </template>
@@ -16,6 +19,7 @@
                 isAnimating: false,
                 activeLanguage: 'en',
                 langPath: 'en',
+                overlayState: false
             }
         },
 
@@ -32,6 +36,14 @@
 
                 this.langPath = this.activeLanguage;
             },
+
+            showOverlay() {
+                this.overlayState = true;
+            },
+
+            hideOverlay() {
+                this.overlayState = false;
+            }
         }
     }
 </script>

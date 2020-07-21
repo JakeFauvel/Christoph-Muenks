@@ -1,10 +1,28 @@
 .project-container {
   padding: 0 5%;
+  position: relative;
   @media only screen and (min-width: 1280px) {
     padding: 0 10%;
   }
 
   .image-wrapper {
     width: 100%;
+  }
+
+  .overlayText {
+    width: inherit;
+    position: absolute;
+    bottom: 0;
+    padding: 25px;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.41);
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   }
 }
