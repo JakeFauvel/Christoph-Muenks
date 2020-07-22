@@ -1,4 +1,55 @@
 .page-content {
-  position: absolute;
-  top: 120px;
+  padding-top: 120px;
+  height: calc(100% - 120px);
+  width: 80%;
+  margin: auto;
+
+  @media only screen and (min-width: 768px) {
+    width: 40%;
+  }
+}
+
+.flex-container {
+  height: calc(120vh - 120px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactTextContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactTitle {
+  font-family: 'Nobel', sans-serif;
+  font-size: 20px;
+  margin: 0;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    font-size: 30px;
+  }
+}
+
+.contactInfoParagraph {
+  font-family: 'Nobel-Book', sans-serif;
+  font-size: 14px;
+  padding-bottom: 15px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    font-size: 20px;
+  }
+}
+
+.nameFieldContainer {
+  display: flex;
+  flex-directon: row;
 }
