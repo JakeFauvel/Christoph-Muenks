@@ -88,24 +88,35 @@ html, body {
   font-size: 16px;
   text-decoration: none;
   z-index: 2;
-  transition: font-size 0.3s ease-in-out;
-
-  &:hover {
-    font-size: 17px;
-    transition: font-size 0.3s ease-in-out;
-  }
 
   @media only screen and (min-width: 1024px) {
     font-size: 24px;
-
-    &:hover {
-      font-size: 25px;
-    }
   }
 
   @media only screen and (max-width: 767px) {
     display: none;
   }
+}
+
+// Underline effect
+a.nav__link.rightLink:after {
+  content: '';
+  position: relative;
+  display: inline-block;
+  height: 0.5em;
+  width: 100%;
+  border-bottom: 1px solid;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+}
+
+a.nav__link.rightLink:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 .nav__link.active--exact {
