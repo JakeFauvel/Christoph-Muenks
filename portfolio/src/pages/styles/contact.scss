@@ -92,6 +92,10 @@
     border: solid 1px #9D9D9D;
     font-family: inherit;
     font-size: inherit;
+    &:focus {
+      outline: none;
+      border: solid 2px #040504;
+    }
   }
 }
 
@@ -117,4 +121,15 @@
       }
     }
   }
+}
+
+.formSubmitButton {
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  border: 2px solid #040504;
+  border-radius: 2px;
+  background: #FFF;
+  color: #040504;
+  padding: 10px 15px;
 }

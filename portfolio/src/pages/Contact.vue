@@ -7,7 +7,7 @@
                     <p class="contactInfoParagraph">{{ lang[langPath]['contact-info'] }}</p>
                 </div>
 
-                <form class="contactForm">
+                <form class="contactForm" autocomplete="off">
                     <div class="nameFieldContainer">
                         <label for="firstName">Name *</label>
 
@@ -29,8 +29,10 @@
 
                     <div class="messageContainer">
                         <label for="message">Message *</label>
-                        <textarea id="message" name="message" placeholder=""/>
+                        <textarea id="message" name="message"/>
                   </div>
+
+                    <input class="formSubmitButton" type="submit" value="SUBMIT">
                 </form>
             </div>
         </div>
