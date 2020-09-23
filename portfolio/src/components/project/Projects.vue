@@ -3,7 +3,7 @@
         <div @mouseover="showOverlay" @mouseleave="hideOverlay" class="image-wrapper">
             <g-image style="width: 100%" :src="require(`!!assets-loader!@images/${project.src}`)" :alt="project.alt"/>
             <transition name="fade">
-                <div v-show="overlayState" ref="overlayText" class="overlayText">{{ project['short-description'] }}</div>
+                <div ref="overlayText" class="overlayText">{{ project['short-description'] }}</div>
             </transition>
         </div>
     </div>

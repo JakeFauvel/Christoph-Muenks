@@ -1,6 +1,6 @@
 .project-container {
   padding: 0 5%;
-  margin-bottom: 5%;
+  margin-bottom: 80px;
   position: relative;
   @media only screen and (min-width: 1280px) {
     padding: 0 10%;
@@ -27,9 +27,6 @@
     }
   }
 
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
-  }
   .fade-enter, .fade-leave-to {
     opacity: 0;
   }

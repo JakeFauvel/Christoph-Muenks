@@ -63,7 +63,7 @@ html, body {
       max-height: 18px;
 
       @media only screen and (min-width: 1024px) {
-        max-height: 26px;
+        max-height: 32px;
       }
     }
 
@@ -98,27 +98,9 @@ html, body {
   }
 }
 
-/* Underline effect
-   Reference: https://codepen.io/colloque/pen/bDgmx
- */
-a.nav__link.rightLink:after {
-  content: '';
-  position: relative;
-  display: inline-block;
-  height: 0.5em;
-  width: 100%;
+a.nav__link.rightLink:hover {
+  padding-bottom: 5px;
   border-bottom: 1px solid;
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: scale(0,1);
-  transform: scale(0,1);
-}
-
-a.nav__link.rightLink:hover:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
 }
 
 .nav__link.active--exact {
@@ -137,26 +119,13 @@ a.nav__link.rightLink:hover:after {
   position: relative;
   margin-left: 0;
   font-weight: normal;
-  transition: font-size 0.3s ease-in-out;
-  &:hover {
-    font-size: 22px;
-    transition: font-size 0.3s ease-in-out;
-  }
 
   @media only screen and (min-width: 768px) {
     font-size: 22px;
-
-    &:hover {
-      font-size: 24px;
-    }
   }
 
   @media only screen and (min-width: 820px) {
     font-size: 24px;
-
-    &:hover {
-      font-size: 26px;
-    }
   }
 
   @media only screen and (max-width: 768px) {
@@ -165,10 +134,6 @@ a.nav__link.rightLink:hover:after {
 
   @media only screen and (min-width: 1280px) {
     font-size: 36px;
-
-    &:hover {
-      font-size: 38px;
-    }
   }
 }
 

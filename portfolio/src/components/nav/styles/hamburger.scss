@@ -81,16 +81,11 @@ $white: #FFF;
     transition: font-size 0.3s ease-in-out;
 
     &:hover {
-      font-size: 21px;
       transition: font-size 0.3s ease-in-out;
     }
 
     @media only screen and (min-width: 768px) {
       font-size: 52px;
-
-      &:hover {
-        font-size: 53px;
-      }
     }
   }
 
@@ -131,10 +126,6 @@ $white: #FFF;
       opacity: 0.5;
       transition: opacity, font-size 0.2s ease-in-out;
       cursor: pointer;
-
-      &:hover {
-        font-size: 21px;
-      }
     }
 
     .language-option.active-language {
