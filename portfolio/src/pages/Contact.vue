@@ -9,21 +9,28 @@
 
                 <form class="contactForm">
                     <div class="nameFieldContainer">
-                        <label for="firstName">First name:</label>
-                        <input type="text" id="firstName" name="firstName"><br>
+                        <label for="firstName">Name *</label>
 
-                        <label for="lastName">Last name:</label>
-                        <input type="text" id="lastName" name="lastName">
+                        <div class="nameInputs">
+                            <input type="text" id="firstName" name="firstName" placeholder="First name">
+                            <input type="text" id="lastName" name="lastName" placeholder="Last name">
+                        </div>
                     </div>
 
-                    <label for="emailAddress">Email address:</label><br>
-                    <input type="text" id="emailAddress" name="emailAddress">
+                    <div class="emailFieldContainer">
+                        <label for="emailAddress">Email address *</label>
+                        <input type="text" id="emailAddress" name="emailAddress" placeholder="example@email.com">
+                    </div>
 
-                    <label for="subject">Subject:</label><br>
-                    <input type="text" id="subject" name="subject">
+                    <div class="subjectContainer">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project">
+                    </div>
 
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message"/>
+                    <div class="messageContainer">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder=""/>
+                  </div>
                 </form>
             </div>
         </div>

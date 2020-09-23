@@ -5,12 +5,20 @@
   margin: auto;
 
   @media only screen and (min-width: 768px) {
+    width: 60%;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    width: 50%;
+  }
+
+  @media only screen and (min-width: 1280px) {
     width: 40%;
   }
 }
 
 .flex-container {
-  height: calc(120vh - 120px);
+  height: calc(100vh - 120px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +57,64 @@
   }
 }
 
-.nameFieldContainer {
+.contactForm {
+  width: 100%;
+  font-family: Nobel;
+  font-size: 14px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    font-size: 20px;
+  }
+}
+
+.nameFieldContainer, .emailFieldContainer, .subjectContainer, .messageContainer {
   display: flex;
-  flex-directon: row;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 20px;
+  font-family: inherit;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input, textarea {
+    padding: 10px;
+    border-radius: 2px;
+    border: solid 1px #9D9D9D;
+    font-family: inherit;
+    font-size: inherit;
+  }
+}
+
+.nameFieldContainer {
+  .nameInputs {
+    display: inherit;
+    flex-direction: column;
+    width: 100%;
+    input:first-of-type {
+      margin-bottom: 20px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      justify-content: space-between;
+      flex-direction: row;
+
+      input:first-of-type {
+        margin-bottom: 0;
+      }
+
+      input {
+        width: 44%;
+      }
+    }
+  }
 }
