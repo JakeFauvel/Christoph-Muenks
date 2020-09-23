@@ -101,6 +101,7 @@ html, body {
 a.nav__link.rightLink:hover {
   padding-bottom: 5px;
   border-bottom: 1px solid;
+  transition: border-width 0.2s ease;
 }
 
 .nav__link.active--exact {

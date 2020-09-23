@@ -17,7 +17,7 @@
 </template>
 
 <script>
-    import Lang from '~/lang/about.json';
+    import Lang from '~/lang/pages/about.json';
 
     export default {
         metaInfo: {

@@ -38,7 +38,7 @@
     </div>
 </template>
 <script>
-    import Lang from '~/lang/nav.json';
+    import Lang from '~/lang/nav/nav.json';
     let Velocity = require('velocity-animate');
 
     export default {

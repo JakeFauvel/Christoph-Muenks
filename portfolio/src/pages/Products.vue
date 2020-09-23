@@ -7,6 +7,8 @@
 </template>
 
 <script>
+    import ProjectsLang from '~/lang/projects/projects.json';
+
     export default {
         metaInfo: {
             title: 'Christoph Münks - Products'

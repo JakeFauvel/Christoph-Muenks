@@ -40,7 +40,7 @@
 </template>
 
 <script>
-    import Lang from '~/lang/contact.json';
+    import Lang from '~/lang/pages/contact.json';
 
     export default {
         metaInfo: {

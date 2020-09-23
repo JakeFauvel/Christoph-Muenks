@@ -35,7 +35,7 @@
 <script>
     import Hamburger from '~/components/nav/Hamburger.vue';
     import Switcher from '~/components/nav/Switcher.vue';
-    import Lang from '~/lang/nav.json';
+    import Lang from '~/lang/nav/nav.json';
 
     export default {
         components: {

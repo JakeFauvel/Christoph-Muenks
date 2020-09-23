@@ -11,7 +11,8 @@
     </div>
 </template>
 <script>
-    import DropdownIcon from '~/components/nav/DropdownIcon.vue'
+    import DropdownIcon from '~/components/nav/DropdownIcon.vue';
+
     export default {
         components: {
             DropdownIcon

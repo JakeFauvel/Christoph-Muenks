@@ -5,7 +5,12 @@
       "short-description": "English example project 1 information",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "src": "home/project-1/F1080015.jpg",
-      "alt": "Industrial gate image"
+      "alt": "Industrial gate image",
+      "additionalImages":{
+        "0": "home/project-1/F1080015.jpg",
+        "1": "home/project-1/F1080015.jpg",
+        "2": "home/project-1/F1080015.jpg"
+      }
     },
 
     "2": {
@@ -13,7 +18,10 @@
       "short-description": "English example project 2 information",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "src": "home/project-2/project_2.png",
-      "alt": "Industrial gate image"
+      "alt": "Industrial gate image",
+      "additionalImages": {
+
+      }
     },
 
     "3": {
@@ -21,7 +29,10 @@
       "short-description": "English example project 3 information",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "src": "home/project-1/F1080015.jpg",
-      "alt": "Industrial gate image"
+      "alt": "Industrial gate image",
+      "additionalImages": {
+
+      }
     }
   },
 
@@ -31,7 +42,12 @@
       "short-description": "Deutsches Beispielprojekt 1",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "src": "home/project-1/F1080015.jpg",
-      "alt": "Industrietorbild"
+      "alt": "Industrietorbild",
+      "additionalImages":{
+        "0": "home/project-1/F1080015.jpg",
+        "1": "home/project-1/F1080015.jpg",
+        "2": "home/project-1/F1080015.jpg"
+      }
     },
 
     "2": {
@@ -39,7 +55,10 @@
       "short-description": "Deutsches Beispielprojekt 2",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "src": "home/project-2/project_2.png",
-      "alt": "Industrietorbild"
+      "alt": "Industrietorbild",
+      "additionalImages": {
+
+      }
     },
 
     "3": {
@@ -47,7 +66,10 @@
       "short-description": "Deutsches Beispielprojekt 3",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "src": "home/project-1/F1080015.jpg",
-      "alt": "Industrietorbild"
+      "alt": "Industrietorbild",
+      "additionalImages": {
+
+      }
     }
   }
 }
