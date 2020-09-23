@@ -9,6 +9,10 @@
         <div class="content">
             <h2 class="projectHeader">{{ project.title }}</h2>
             <p class="projectInfo">{{ project['long-description'] }}</p>
+
+            <div class="imageGallery">
+                <g-image :src="require(`!!assets-loader!@images/${project.src}`)" alt=""/>
+            </div>
         </div>
     </div>
 </template>

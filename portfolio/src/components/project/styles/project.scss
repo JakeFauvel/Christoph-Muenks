@@ -6,6 +6,7 @@
   left: 0;
   z-index: 10;
   background: #FFF;
+  overflow: auto;
 
   .controls {
     position: absolute;
@@ -56,6 +57,14 @@
 
       @media only screen and (min-width: 1280px) {
         font-size: 20px;
+      }
+    }
+
+    .imageGallery {
+      width: 100%;
+
+      > img {
+        width: 100%;
       }
     }
   }
