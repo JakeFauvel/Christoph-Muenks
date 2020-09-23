@@ -3,21 +3,23 @@
     "title": "Contact",
     "contact-info": "For all pricing and booking inquiries, please fill out the form below. Please include as much relevant information as possible, for example, specifications, the location of the project, and timeframe for project completion.",
     "name": "Name",
-    "field-one": "First name",
-    "field-two": "Last name",
-    "field-three": "Email address",
-    "field-four": "Subject",
-    "field-five": "Message"
+    "first-name": "First name",
+    "last-name": "Last name",
+    "email": "Email address",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "SUBMIT"
   },
 
   "contact-de": {
     "title": "Kontakt",
     "contact-info": "Für alle Preis- und Buchungsanfragen füllen Sie bitte das folgende Formular aus. Bitte geben Sie so viele relevante Informationen wie möglich an, z. B. Spezifikationen, den Standort des Projekts und den Zeitrahmen für den Abschluss des Projekts.",
     "name": "Name",
-    "field-one": "Vorname",
-    "field-two": "Nachname",
-    "field-three": "E-Mail-Addresse",
-    "field-four": "Gegenstand",
-    "field-five": "Botschaft"
+    "first-name": "Vorname",
+    "last-name": "Nachname",
+    "email": "E-Mail-Addresse",
+    "subject": "Gegenstand",
+    "message": "Botschaft",
+    "submit":  "Einreichen"
   }
 }

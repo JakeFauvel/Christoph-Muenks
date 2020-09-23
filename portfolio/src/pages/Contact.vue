@@ -9,30 +9,30 @@
 
                 <form class="contactForm" autocomplete="off">
                     <div class="nameFieldContainer">
-                        <label for="firstName">Name *</label>
+                        <label for="firstName">{{ lang[langPath]['name'] }}  *</label>
 
                         <div class="nameInputs">
-                            <input type="text" id="firstName" name="firstName" placeholder="First name">
-                            <input type="text" id="lastName" name="lastName" placeholder="Last name">
+                            <input type="text" id="firstName" name="firstName" :placeholder="lang[langPath]['first-name']">
+                            <input type="text" id="lastName" name="lastName" :placeholder="lang[langPath]['last-name']">
                         </div>
                     </div>
 
                     <div class="emailFieldContainer">
-                        <label for="emailAddress">Email address *</label>
+                        <label for="emailAddress">{{ lang[langPath]['email'] }} *</label>
                         <input type="text" id="emailAddress" name="emailAddress" placeholder="example@email.com">
                     </div>
 
                     <div class="subjectContainer">
-                        <label for="subject">Subject *</label>
+                        <label for="subject">{{ lang[langPath]['subject'] }} *</label>
                         <input type="text" id="subject" name="subject" placeholder="Project">
                     </div>
 
                     <div class="messageContainer">
-                        <label for="message">Message *</label>
+                        <label for="message">{{ lang[langPath]['message'] }} *</label>
                         <textarea id="message" name="message"/>
                   </div>
 
-                    <input class="formSubmitButton" type="submit" value="SUBMIT">
+                    <input class="formSubmitButton" type="submit" :value="lang[langPath]['submit'].toUpperCase()">
                 </form>
             </div>
         </div>

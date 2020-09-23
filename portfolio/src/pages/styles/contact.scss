@@ -94,7 +94,7 @@
     font-size: inherit;
     &:focus {
       outline: none;
-      border: solid 2px #040504;
+      border: solid 1px #040504;
     }
   }
 }
@@ -132,4 +132,16 @@
   background: #FFF;
   color: #040504;
   padding: 10px 15px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transition: all 0.2s ease;
+    background: #040504;
+    color: #FFF;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
