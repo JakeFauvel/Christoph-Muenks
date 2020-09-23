@@ -7,14 +7,22 @@
         </div>
 
         <div class="content">
-            <h2 class="projectHeader">Project XYZ</h2>
-            <p class="projectInfo">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            <h2 class="projectHeader">{{ project.title }}</h2>
+            <p class="projectInfo">{{ project['long-description'] }}</p>
         </div>
     </div>
 </template>
 
 <script>
     export default {
+        props: ['projectInfo'],
+
+        data: function () {
+            return {
+                project: this.projectInfo,
+            }
+        },
+
         methods: {
             overlayClose() {
                 // Dispatch a custom event to listen for

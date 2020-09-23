@@ -7,7 +7,7 @@
                       v-on:click.native="toggleOverlay(projectInfo)">
             </projects>
 
-            <project v-show="overlayActive" :project="projectInfo" class="projectOverlay"></project>
+            <project v-if="overlayActive" :projectInfo="projectInfo" class="projectOverlay"></project>
         </div>
     </Layout>
 </template>
@@ -54,7 +54,9 @@
                 this.langContentPath = 'index-' + this.activeLanguage;
             },
 
-            toggleOverlay() {
+            toggleOverlay(projectInfo) {
+                this.projectInfo = projectInfo;
+
                 if (this.overlayActive) {
                     document.body.style.overflow = 'initial';
                     this.overlayActive = false;

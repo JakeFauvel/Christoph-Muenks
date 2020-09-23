@@ -38,7 +38,7 @@
 
   "de": {
     "1": {
-      "title": "Beispielprojekt",
+      "title": "Deutsches Beispielprojekt 1",
       "short-description": "Deutsches Beispielprojekt 1",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "src": "home/project-1/F1080015.jpg",
@@ -51,7 +51,7 @@
     },
 
     "2": {
-      "title": "Example project 2",
+      "title": "Deutsches Beispielprojekt 2",
       "short-description": "Deutsches Beispielprojekt 2",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "src": "home/project-2/project_2.png",
@@ -62,7 +62,7 @@
     },
 
     "3": {
-      "title": "Example project 3",
+      "title": "Deutsches Beispielprojekt 3",
       "short-description": "Deutsches Beispielprojekt 3",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "src": "home/project-1/F1080015.jpg",
