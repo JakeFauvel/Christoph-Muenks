@@ -6,11 +6,12 @@
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "src": "home/project-1/F1080015.jpg",
       "alt": "Industrial gate image",
-      "additionalImages":{
-        "0": "home/project-1/F1080015.jpg",
-        "1": "home/project-1/F1080015.jpg",
-        "2": "home/project-1/F1080015.jpg"
-      }
+      "additionalImages": [
+        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
+        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
+        "http://www.schmiede-muenks.de/img/wip/wip.jpg",
+        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg"
+      ]
     },
 
     "2": {
@@ -43,11 +44,11 @@
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "src": "home/project-1/F1080015.jpg",
       "alt": "Industrietorbild",
-      "additionalImages":{
-        "0": "home/project-1/F1080015.jpg",
-        "1": "home/project-1/F1080015.jpg",
-        "2": "home/project-1/F1080015.jpg"
-      }
+      "additionalImages": [
+        "home/project-1/F1080015.jpg",
+        "home/project-2/project_2.png",
+        "home/project-1/F1080015.jpg"
+      ]
     },
 
     "2": {

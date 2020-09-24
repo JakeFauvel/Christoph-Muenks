@@ -10,26 +10,61 @@
 
   .controls {
     position: absolute;
+    align-items: center;
+    display: flex;
     right: 5%;
     top: 5%;
-    width: 100px;
-    height: 100px;
-    background: red;
-  }
 
-  .content {
-    position: absolute;
-    top: 120px;
-    font-family: 'Nobel', sans-serif;
-    font-size: 24px;
-    padding: 0 30px 50px 30px;
+    .arrow-icon  {
+      width: 35px;
+      height: 35px;
 
-    @media only screen and (min-width: 768px) {
-      padding: 0 5% 50px 5%;
+      &:first-child {
+        margin-right: 15px;
+      }
+
+      &:last-child {
+        margin-left: 15px;
+      }
     }
 
-    @media only screen and (min-width: 1280px) {
-      padding: 0 10% 50px 10%;
+    .close-icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .flex-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      width: 80%;
+
+      .royalSlider {
+        margin: auto;
+        width: 100%;
+        height: 500px;
+
+        .rsContent {
+          background: #FFF;
+        }
+
+        img, .rsImg {
+          height: 100% !important;
+        }
+      }
+
+      @media only screen and (min-width: 1024px) {
+        width: 75%;
+      }
+
+      @media only screen and (min-width: 1280px) {
+        width: 60%;
+      }
     }
 
     .projectHeader {
@@ -57,14 +92,6 @@
 
       @media only screen and (min-width: 1280px) {
         font-size: 20px;
-      }
-    }
-
-    .imageGallery {
-      width: 100%;
-
-      > img {
-        width: 100%;
       }
     }
   }

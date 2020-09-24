@@ -12,6 +12,10 @@
     padding: 0 10% 50px 10%;
   }
 
+  @media only screen and (min-width: 1700px) {
+    padding: 0 21% 50px 21%;
+  }
+
   .about-header {
     font-family: 'Nobel', sans-serif;
     font-size: 16px;

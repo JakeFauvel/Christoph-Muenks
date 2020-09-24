@@ -50,6 +50,10 @@ html, body {
     @media only screen and (min-width: 1280px) {
       padding-left: 10%;
     }
+
+    @media only screen and (min-width: 1700px) {
+      padding-left: 21%;
+    }
   }
 
   .right {
@@ -73,6 +77,10 @@ html, body {
 
     @media only screen and (min-width: 1280px) {
       padding-right: 10%;
+    }
+
+    @media only screen and (min-width: 1700px) {
+      padding-right: 21%;
     }
   }
 }
