@@ -7,29 +7,29 @@
                     <p class="contactInfoParagraph">{{ lang[langPath]['contact-info'] }}</p>
                 </div>
 
-                <form class="contactForm" autocomplete="off">
+                <form class="contactForm" autocomplete="off" action="https://formspree.io/xoqpqogy" method="POST">
                     <div class="nameFieldContainer">
                         <label for="firstName">{{ lang[langPath]['name'] }}  *</label>
 
                         <div class="nameInputs">
-                            <input type="text" id="firstName" name="firstName" :placeholder="lang[langPath]['first-name']">
-                            <input type="text" id="lastName" name="lastName" :placeholder="lang[langPath]['last-name']">
+                            <input type="text" id="firstName" name="First name" :placeholder="lang[langPath]['first-name']">
+                            <input type="text" id="lastName" name="Last name" :placeholder="lang[langPath]['last-name']">
                         </div>
                     </div>
 
                     <div class="emailFieldContainer">
                         <label for="emailAddress">{{ lang[langPath]['email'] }} *</label>
-                        <input type="text" id="emailAddress" name="emailAddress" placeholder="example@email.com">
+                        <input type="text" id="emailAddress" name="Email address" placeholder="example@email.com">
                     </div>
 
                     <div class="subjectContainer">
                         <label for="subject">{{ lang[langPath]['subject'] }} *</label>
-                        <input type="text" id="subject" name="subject" placeholder="Project">
+                        <input type="text" id="subject" name="Subject" placeholder="Project">
                     </div>
 
                     <div class="messageContainer">
                         <label for="message">{{ lang[langPath]['message'] }} *</label>
-                        <textarea id="message" name="message"/>
+                        <textarea id="message" name="Message"/>
                   </div>
 
                     <input class="formSubmitButton" type="submit" :value="lang[langPath]['submit'].toUpperCase()">
