@@ -1,13 +1,13 @@
 <template>
     <Layout>
         <div class="page-content homepage">
-            <projects v-for="projectInfo in projectsLang[activeLanguage]"
+            <projects v-for="(projectInfo, i) in projectsLang[activeLanguage]"
                       :project="projectInfo"
                       :key="projectInfo.key"
-                      v-on:click.native="toggleOverlay(projectInfo)">
+                      v-on:click.native="toggleOverlay(projectInfo, i)">
             </projects>
 
-            <project v-if="overlayActive" :projectInfo="projectInfo" class="projectOverlay"></project>
+            <project v-if="overlayActive" :projectInfo="projectInfo" :projectIndex="projectIndex" page="homepage" class="projectOverlay"></project>
         </div>
     </Layout>
 </template>
@@ -35,7 +35,8 @@
                 activeLanguage: 'en',
                 langContentPath: 'index-en',
                 overlayActive: false,
-                projectInfo: null
+                projectInfo: null,
+                projectIndex: null,
             }
         },
 
@@ -54,8 +55,9 @@
                 this.langContentPath = 'index-' + this.activeLanguage;
             },
 
-            toggleOverlay(projectInfo) {
+            toggleOverlay(projectInfo, index) {
                 this.projectInfo = projectInfo;
+                this.projectIndex = index;
 
                 if (this.overlayActive) {
                     document.body.style.overflow = 'initial';
