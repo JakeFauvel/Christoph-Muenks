@@ -106,7 +106,6 @@
             checkSelected() {
                 let parent = document.getElementsByClassName(this.parentPageName)[0];
                 let currentIndex = parseInt(this.index);
-                console.log(currentIndex, parent.children.length - 1);
 
                 if (currentIndex === 1 && currentIndex !== parent.children.length - 1) {
                     this.disableArrow(this.$refs.leftArrow.$el);

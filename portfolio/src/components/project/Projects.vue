@@ -1,7 +1,7 @@
 <template>
     <div ref="projectContainer" class="project-container">
         <div @mouseover="showOverlay" @mouseleave="hideOverlay" class="image-wrapper">
-            <g-image style="width: 100%" :src="require(`!!assets-loader!@images/${project.src}`)" :alt="project.alt"/>
+            <img style="width: 100%" :src="project.src" :alt="project.alt"/>
             <transition name="fade">
                 <div ref="overlayText" class="overlayText">{{ project['short-description'] }}</div>
             </transition>

@@ -4,7 +4,7 @@
       "title": "Example project 1",
       "short-description": "English example project 1 information",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "src": "home/project-1/F1080015.jpg",
+      "src": "http://www.schmiede-muenks.de/img/gartenlaube_rankgitter_k%C3%B6ln/36rankgitter_garten_koln_ma.jpg",
       "alt": "Industrial gate image",
       "additionalImages": [
         "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
@@ -17,22 +17,26 @@
       "title": "Example project 2",
       "short-description": "English example project 2 information",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "src": "home/project-2/project_2.png",
+      "src": "http://www.schmiede-muenks.de/img/minoritenkirche_neersen/F1080015.jpg",
       "alt": "Industrial gate image",
-      "additionalImages": {
-
-      }
+      "additionalImages": [
+        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
+        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg"
+      ]
     },
 
     "3": {
       "title": "Example project 1",
       "short-description": "English example project 3 information",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "src": "home/project-1/F1080015.jpg",
+      "src": "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
       "alt": "Industrial gate image",
-      "additionalImages": {
-
-      }
+      "additionalImages": [
+        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
+        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
+        "http://www.schmiede-muenks.de/img/wip/wip.jpg",
+        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg"
+      ]
     }
   },
 
@@ -41,12 +45,13 @@
       "title": "Deutsches Beispielprojekt 1",
       "short-description": "Deutsches Beispielprojekt 1",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "src": "home/project-1/F1080015.jpg",
+      "src": "http://www.schmiede-muenks.de/img/gartenlaube_rankgitter_k%C3%B6ln/36rankgitter_garten_koln_ma.jpg",
       "alt": "Industrietorbild",
       "additionalImages": [
-        "home/project-1/F1080015.jpg",
-        "home/project-2/project_2.png",
-        "home/project-1/F1080015.jpg"
+        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
+        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
+        "http://www.schmiede-muenks.de/img/wip/wip.jpg",
+        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg"
       ]
     },
 
@@ -54,22 +59,26 @@
       "title": "Deutsches Beispielprojekt 2",
       "short-description": "Deutsches Beispielprojekt 2",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "src": "home/project-2/project_2.png",
+      "src": "http://www.schmiede-muenks.de/img/minoritenkirche_neersen/F1080015.jpg",
       "alt": "Industrietorbild",
-      "additionalImages": {
-
-      }
+      "additionalImages": [
+        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
+        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg"
+      ]
     },
 
     "3": {
       "title": "Deutsches Beispielprojekt 3",
       "short-description": "Deutsches Beispielprojekt 3",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "src": "home/project-1/F1080015.jpg",
+      "src": "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
       "alt": "Industrietorbild",
-      "additionalImages": {
-
-      }
+      "additionalImages": [
+        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
+        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
+        "http://www.schmiede-muenks.de/img/wip/wip.jpg",
+        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg"
+      ]
     }
   }
 }
