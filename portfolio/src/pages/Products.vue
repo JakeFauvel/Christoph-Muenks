@@ -1,17 +1,70 @@
 <template>
     <Layout>
-        <div class="page-content">
+        <div class="page-content products">
+            <projects v-for="(productInfo, i) in productsLang[activeLanguage]"
+                      :project="productInfo"
+                      :key="productInfo.key"
+                      v-on:click.native="toggleOverlay(productInfo, i)">
+            </projects>
 
+            <project v-if="overlayActive" :projectInfo="productInfo" :projectIndex="productIndex" page="products" class="projectOverlay"></project>
         </div>
     </Layout>
 </template>
 
 <script>
-    import ProjectsLang from '~/lang/projects/projects.json';
+    import ProductsLang from '~/lang/pages/products.json';
+    import Projects from '~/components/project/Projects.vue';
+    import Project from '~/components/project/Project.vue';
 
     export default {
         metaInfo: {
             title: 'Christoph Münks - Products'
+        },
+
+        components: {
+            Projects,
+            Project
+        },
+
+        mounted() {
+            this.setLanguage();
+            window.addEventListener('langChanged', this.setLanguage);
+            window.addEventListener('overlayClosed', this.toggleOverlay);
+        },
+
+        data: function () {
+            return {
+                productsLang: ProductsLang,
+                activeLanguage: 'en',
+                langContentPath: 'en',
+                overlayActive: false,
+                productInfo: null,
+                productIndex: null,
+            }
+        },
+
+        methods: {
+            setLanguage() {
+                if (localStorage.getItem("language") !== null) {
+                    this.activeLanguage = localStorage.getItem("language");
+                }
+
+                this.langContentPath = this.activeLanguage;
+            },
+
+            toggleOverlay(productInfo, index) {
+                this.productInfo = productInfo;
+                this.productIndex = index;
+
+                if (this.overlayActive) {
+                    document.body.style.overflow = 'initial';
+                    this.overlayActive = false;
+                } else {
+                    document.body.style.overflow = 'hidden';
+                    this.overlayActive = true;
+                }
+            }
         }
     }
 </script>
