@@ -20,9 +20,7 @@
                 </div>
 
                 <div ref="royalSliderElement" id="full-width-slider" class="royalSlider heroSlider rsMinW">
-                    <div class="rsContent" v-for="image in project['additionalImages']">
-                        <img class="rsImg" :src="image" alt="">
-                    </div>
+                    <!-- Gallery images appended dynamically based on project index -->
                 </div>
             </div>
         </div>
@@ -63,7 +61,6 @@
             this.setLanguage();
             this.initialiseRoyalSlider();
             this.checkSelected();
-            window.addEventListener('resize', this.adjustSize);
         },
 
         methods: {
@@ -81,26 +78,56 @@
             },
 
             initialiseRoyalSlider() {
-                this.adjustSize();
-                jQuery(document).ready(function($) {
-                    $('#full-width-slider').royalSlider({
-                        arrowsNav: true,
-                        keyboardNavEnabled: true,
-                        controlsInside: true,
-                        imageScaleMode: 'fit',
-                        arrowsNavAutoHide: false,
-                        controlNavigation: 'none',
-                        thumbsFitInViewport: false,
-                        navigateByClick: true,
-                        startSlideId: 0,
-                        autoPlay: false,
-                        transitionType:'move',
-                        fullscreen: {
-                            enabled: true,
-                            nativeFS: true
-                        }
-                    });
+                let slides = this.assembleSlides();
+                let slideString = '';
+                slides.forEach(function(slide) {
+                    slideString = slideString + slide.outerHTML;
                 });
+
+                jQuery('.royalSlider').royalSlider('destroy').empty().royalSlider({
+                    slides: slideString,
+                    autoScaleSlider: true,
+                    arrowsNav: true,
+                    keyboardNavEnabled: true,
+                    controlsInside: true,
+                    imageScaleMode: 'fit',
+                    arrowsNavAutoHide: false,
+                    controlNavigation: 'none',
+                    thumbsFitInViewport: false,
+                    navigateByClick: true,
+                    startSlideId: 0,
+                    autoPlay: false,
+                    transitionType:'move',
+                    fullscreen: {
+                        enabled: true,
+                        nativeFS: true
+                    }
+                });
+            },
+
+            assembleSlides() {
+                let slides = [];
+
+                this.project['additionalImages'].forEach(function (image) {
+                    let rsContent = document.createElement('div');
+                    rsContent.classList.add('rsContent');
+
+                    let rsImage = document.createElement('img');
+                    rsImage.src = image;
+                    rsImage.id = image;
+                    rsImage.classList.add('rsImage');
+                    rsImage.style.height = '100%';
+                    rsImage.alt = '';
+
+                    rsImage.onload = function() {
+                        if (rsImage.width > rsImage.height) document.getElementById(image).style.width = '100%';
+                    };
+
+                    rsContent.appendChild(rsImage);
+                    slides.push(rsContent);
+                });
+
+                return slides;
             },
 
             checkSelected() {
@@ -141,24 +168,24 @@
             },
 
             leftArrowClick() {
+                this.index = parseInt(this.index) - 1;
                 if (!this.leftArrowDisabled) {
-                    console.log('leftArrowClick()');
+                    if (this.projectsLang[this.activeLanguage][this.index]) this.project = this.projectsLang[this.activeLanguage][this.index];
                 }
+
+                this.initialiseRoyalSlider();
+                this.checkSelected();
             },
 
             rightArrowClick() {
+                this.index = parseInt(this.index) + 1;
                 if (!this.rightArrowDisabled) {
-                    console.log('rightArrowClick()');
+                    if (this.projectsLang[this.activeLanguage][this.index]) this.project = this.projectsLang[this.activeLanguage][this.index];
                 }
+
+                this.initialiseRoyalSlider();
+                this.checkSelected();
             },
-
-
-            adjustSize() {
-                let sizeFactor = 0.3;
-                if (document.body.offsetWidth > 768) sizeFactor = 0.6;
-                this.availableGalleryHeight = document.body.offsetHeight * sizeFactor + 'px';
-                this.$refs.royalSliderElement.style.height = this.availableGalleryHeight;
-            }
         }
     }
 </script>
