@@ -12,16 +12,14 @@
             </div>
         </div>
 
-        <div class="flex-container">
-            <div class="content">
-                <div class="text-info">
-                    <h2 class="projectHeader">{{ project.title }}</h2>
-                    <p class="projectInfo">{{ project['long-description'] }}</p>
-                </div>
+        <div class="content">
+            <div class="text-info">
+                <h2 class="projectHeader">{{ project.title }}</h2>
+                <p class="projectInfo">{{ project['long-description'] }}</p>
+            </div>
 
-                <div ref="royalSliderElement" id="full-width-slider" class="royalSlider heroSlider rsMinW">
-                    <!-- Gallery images appended dynamically based on project index -->
-                </div>
+            <div ref="royalSliderElement" id="full-width-slider" class="royalSlider heroSlider rsMinW">
+                <!-- Gallery images appended dynamically based on project index -->
             </div>
         </div>
     </div>

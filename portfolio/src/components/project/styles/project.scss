@@ -59,70 +59,62 @@
     }
   }
 
-  .flex-container {
+  .content {
+    width: 80%;
+    min-height: 100%;
+    margin: auto;
     display: flex;
-    height: 100%;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 
-    .content {
-      width: 80%;
-      height: 80%;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .royalSlider {
+      width: 100%;
+      height: 500px;
 
-      .royalSlider {
-        width: 100%;
-        height: 500px;
-
-        .rsContent {
-          background: #FFF;
-        }
-
-        img, .rsImg {
-          height: 100% !important;
-          width: 100% !important;
-        }
+      .rsContent {
+        background: #FFF;
       }
 
-      @media only screen and (min-width: 1024px) {
-        width: 75%;
-      }
-
-      @media only screen and (min-width: 1280px) {
-        width: 60%;
+      img, .rsImg {
+        height: 100% !important;
+        width: 100% !important;
       }
     }
 
-    .projectHeader {
-      font-family: 'Nobel', sans-serif;
+    @media only screen and (min-width: 1024px) {
+      width: 75%;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      width: 60%;
+    }
+  }
+
+  .projectHeader {
+    font-family: 'Nobel', sans-serif;
+    font-size: 16px;
+    margin: 0;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 20px;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      font-size: 24px;
+    }
+  }
+
+  .projectInfo {
+    font-family: 'Nobel-Book', sans-serif;
+    font-size: 14px;
+    padding-bottom: 15px;
+
+    @media only screen and (min-width: 768px) {
       font-size: 16px;
-      margin: 0;
-
-      @media only screen and (min-width: 768px) {
-        font-size: 20px;
-      }
-
-      @media only screen and (min-width: 1280px) {
-        font-size: 24px;
-      }
     }
 
-    .projectInfo {
-      font-family: 'Nobel-Book', sans-serif;
-      font-size: 14px;
-      padding-bottom: 15px;
-
-      @media only screen and (min-width: 768px) {
-        font-size: 16px;
-      }
-
-      @media only screen and (min-width: 1280px) {
-        font-size: 20px;
-      }
+    @media only screen and (min-width: 1280px) {
+      font-size: 20px;
     }
   }
 }
