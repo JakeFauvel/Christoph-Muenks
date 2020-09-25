@@ -45,7 +45,7 @@
         data: function () {
             return {
                 projectsLang: ProjectsLang,
-                activeLanguage: 'en',
+                activeLanguage: 'de',
                 project: this.projectInfo,
                 parentPageName: this.page,
                 index: this.projectIndex,

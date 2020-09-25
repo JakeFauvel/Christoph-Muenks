@@ -28,6 +28,7 @@
         },
 
         mounted() {
+            document.body.style.overflow = 'initial';
             this.setLanguage();
             window.addEventListener('langChanged', this.setLanguage);
             window.addEventListener('overlayClosed', this.toggleOverlay);
@@ -36,8 +37,8 @@
         data: function () {
             return {
                 productsLang: ProductsLang,
-                activeLanguage: 'en',
-                langContentPath: 'en',
+                activeLanguage: 'de',
+                langContentPath: 'de',
                 overlayActive: false,
                 productInfo: null,
                 productIndex: null,

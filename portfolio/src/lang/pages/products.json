@@ -4,23 +4,22 @@
       "title": "Example product 1",
       "short-description": "English example product 1 information",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare aenean euismod elementum nisi quis. Egestas dui id ornare arcu odio ut sem.",
-      "src": "http://www.schmiede-muenks.de/img/gartenlaube_rankgitter_k%C3%B6ln/36rankgitter_garten_koln_ma.jpg",
+      "src": "http://www.schmiede-muenks.de/img/boehm/kapelle-03.jpg",
       "alt": "Industrial gate image",
       "additionalImages": [
-        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
-        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
-        "http://www.schmiede-muenks.de/img/wip/wip.jpg",
-        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg"
+        "http://www.schmiede-muenks.de/img/stahlwaende_schiebetor_duesseldorf/stoschek-022.jpg",
+        "http://www.schmiede-muenks.de/img/boehm/kapelle-05.jpg",
+        "http://www.schmiede-muenks.de/img/boehm/kapelle-03.jpg"
       ]
     },
     "2": {
       "title": "Example product 2",
       "short-description": "English example project 2 information",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hendrerit gravida rutrum quisque non tellus. Quis hendrerit dolor magna eget est lorem. Aliquet eget sit amet tellus cras adipiscing. Cursus euismod quis viverra nibh cras.",
-      "src": "http://www.schmiede-muenks.de/img/minoritenkirche_neersen/F1080015.jpg",
+      "src": "http://www.schmiede-muenks.de/img/stahlwaende_schiebetor_duesseldorf/Schanzenstr.-Dorfstr-019.jpg",
       "alt": "Industrial gate image",
       "additionalImages": [
-        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
+        "http://www.schmiede-muenks.de/img/tore_gitter_laube_gelaender/9finka_mallorca1.jpg",
         "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg"
       ]
     },
@@ -32,10 +31,8 @@
       "src": "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
       "alt": "Industrial gate image",
       "additionalImages": [
-        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
-        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
-        "http://www.schmiede-muenks.de/img/wip/wip.jpg",
-        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg"
+        "http://www.schmiede-muenks.de/img/boehm/kapelle-03.jpg",
+        "http://www.schmiede-muenks.de/img/boehm/kapelle-05.jpg"
       ]
     }
   },
@@ -45,13 +42,12 @@
       "title": "Deutsches Produkte 1",
       "short-description": "Deutsches Produkte 1",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare aenean euismod elementum nisi quis. Egestas dui id ornare arcu odio ut sem.",
-      "src": "http://www.schmiede-muenks.de/img/gartenlaube_rankgitter_k%C3%B6ln/36rankgitter_garten_koln_ma.jpg",
+      "src": "http://www.schmiede-muenks.de/img/boehm/kapelle-03.jpg",
       "alt": "Industrietorbild",
       "additionalImages": [
-        "http://www.schmiede-muenks.de/img/wip/wip.jpg",
-        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg",
-        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
-        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg"
+        "http://www.schmiede-muenks.de/img/stahlwaende_schiebetor_duesseldorf/stoschek-022.jpg",
+        "http://www.schmiede-muenks.de/img/boehm/kapelle-05.jpg",
+        "http://www.schmiede-muenks.de/img/boehm/kapelle-03.jpg"
       ]
     },
 
@@ -59,7 +55,7 @@
       "title": "Deutsches Produkte 2",
       "short-description": "Deutsches Produkte 2",
       "long-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hendrerit gravida rutrum quisque non tellus. Quis hendrerit dolor magna eget est lorem. Aliquet eget sit amet tellus cras adipiscing. Cursus euismod quis viverra nibh cras.",
-      "src": "http://www.schmiede-muenks.de/img/minoritenkirche_neersen/F1080015.jpg",
+      "src": "http://www.schmiede-muenks.de/img/gartenmoebel_01/gartenmoebel_tischbankbank.jpg",
       "alt": "Industrietorbild",
       "additionalImages": [
         "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
@@ -74,10 +70,10 @@
       "src": "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
       "alt": "Industrietorbild",
       "additionalImages": [
-        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
-        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
         "http://www.schmiede-muenks.de/img/wip/wip.jpg",
-        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg"
+        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg",
+        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
+        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg"
       ]
     }
   }

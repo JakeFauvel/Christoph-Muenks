@@ -20,8 +20,8 @@
 
         data: function () {
             return {
-                activeLanguage: 'en',
-                alternateLanguage: 'de',
+                activeLanguage: 'de',
+                alternateLanguage: 'en',
                 open: false
             }
         },

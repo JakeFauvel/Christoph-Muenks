@@ -32,8 +32,8 @@
             return {
                 lang: Lang,
                 projectsLang: ProjectsLang,
-                activeLanguage: 'en',
-                langContentPath: 'index-en',
+                activeLanguage: 'de',
+                langContentPath: 'index-de',
                 overlayActive: false,
                 projectInfo: null,
                 projectIndex: null,
@@ -41,6 +41,7 @@
         },
 
         mounted() {
+            document.body.style.overflow = 'initial';
             this.setLanguage();
             window.addEventListener('langChanged', this.setLanguage);
             window.addEventListener('overlayClosed', this.toggleOverlay);

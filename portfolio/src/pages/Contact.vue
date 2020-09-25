@@ -50,8 +50,8 @@
         data: function () {
             return {
                 lang: Lang,
-                activeLanguage: 'en',
-                langPath: 'contact-en'
+                activeLanguage: 'de',
+                langPath: 'contact-de'
             }
         },
 

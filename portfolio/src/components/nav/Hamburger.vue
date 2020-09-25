@@ -47,8 +47,8 @@
                 lang: Lang,
                 hamburgerOpen: false,
                 isAnimating: false,
-                activeLanguage: 'en',
-                langPath: 'nav-en',
+                activeLanguage: 'de',
+                langPath: 'nav-de',
             }
         },
 

@@ -7,10 +7,10 @@
       "src": "http://www.schmiede-muenks.de/img/gartenlaube_rankgitter_k%C3%B6ln/36rankgitter_garten_koln_ma.jpg",
       "alt": "Industrial gate image",
       "additionalImages": [
-        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
-        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
         "http://www.schmiede-muenks.de/img/wip/wip.jpg",
-        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg"
+        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg",
+        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
+        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg"
       ]
     },
     "2": {
@@ -48,10 +48,10 @@
       "src": "http://www.schmiede-muenks.de/img/gartenlaube_rankgitter_k%C3%B6ln/36rankgitter_garten_koln_ma.jpg",
       "alt": "Industrietorbild",
       "additionalImages": [
-        "http://www.schmiede-muenks.de/img/wip/wip.jpg",
-        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg",
         "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
-        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg"
+        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
+        "http://www.schmiede-muenks.de/img/wip/wip.jpg",
+        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg"
       ]
     },
 
@@ -74,10 +74,10 @@
       "src": "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
       "alt": "Industrietorbild",
       "additionalImages": [
-        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
-        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg",
         "http://www.schmiede-muenks.de/img/wip/wip.jpg",
-        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg"
+        "http://www.schmiede-muenks.de/img/wip/wip-2.jpg",
+        "http://www.schmiede-muenks.de/img/beuys_denkmal_meerbusch/28beuys_tor_detail.jpg",
+        "http://www.schmiede-muenks.de/img/hubbelrath/Hubbelrath_01.jpg"
       ]
     }
   }

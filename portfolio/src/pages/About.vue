@@ -27,8 +27,8 @@
         data: function () {
             return {
                 lang: Lang,
-                activeLanguage: 'en',
-                langPath: 'about-en'
+                activeLanguage: 'de',
+                langPath: 'about-de'
             }
         },
 
