@@ -151,7 +151,6 @@
                     this.disableArrow(this.$refs.rightArrow.$el);
                     this.leftArrowDisabled = false;
                     this.rightArrowDisabled = true;
-
                 }
             },
 
@@ -166,23 +165,21 @@
             },
 
             leftArrowClick() {
-                this.index = parseInt(this.index) - 1;
                 if (!this.leftArrowDisabled) {
+                    this.index = parseInt(this.index) - 1;
                     if (this.projectsLang[this.activeLanguage][this.index]) this.project = this.projectsLang[this.activeLanguage][this.index];
+                    this.initialiseRoyalSlider();
+                    this.checkSelected();
                 }
-
-                this.initialiseRoyalSlider();
-                this.checkSelected();
             },
 
             rightArrowClick() {
-                this.index = parseInt(this.index) + 1;
                 if (!this.rightArrowDisabled) {
+                    this.index = parseInt(this.index) + 1;
                     if (this.projectsLang[this.activeLanguage][this.index]) this.project = this.projectsLang[this.activeLanguage][this.index];
+                    this.initialiseRoyalSlider();
+                    this.checkSelected();
                 }
-
-                this.initialiseRoyalSlider();
-                this.checkSelected();
             },
         }
     }
