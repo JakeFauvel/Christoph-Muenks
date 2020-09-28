@@ -33,8 +33,7 @@ html, body {
 
   .left {
     width: 92%;
-    padding-left: 8%;
-    justify-content: center;
+    margin-left: 5%;
 
     @media only screen and (min-width: 375px) {
       width: 100%;
@@ -44,6 +43,7 @@ html, body {
     @media only screen and (min-width: 768px) {
       width: 30%;
       padding-left: 5%;
+      margin-left: initial;
       justify-content: flex-start;
     }
 
