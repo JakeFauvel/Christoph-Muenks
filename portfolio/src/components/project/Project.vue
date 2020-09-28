@@ -100,10 +100,10 @@
                     navigateByClick: true,
                     startSlideId: 0,
                     autoPlay: false,
-                    transitionType:'move',
+                    transitionType: 'move',
                     fullscreen: {
                         enabled: true,
-                        nativeFS: true
+                        nativeFS: false
                     }
                 });
             },
