@@ -92,19 +92,14 @@
                     autoScaleSlider: true,
                     arrowsNav: true,
                     keyboardNavEnabled: true,
-                    controlsInside: true,
-                    imageScaleMode: 'fit',
+                    imageScaleMode: 'fill',
                     arrowsNavAutoHide: false,
                     controlNavigation: 'none',
                     thumbsFitInViewport: false,
                     navigateByClick: true,
                     startSlideId: 0,
                     autoPlay: false,
-                    transitionType: 'move',
-                    fullscreen: {
-                        enabled: true,
-                        nativeFS: false
-                    }
+                    transitionType: 'move'
                 });
             },
 
@@ -119,12 +114,8 @@
                     rsImage.src = image;
                     rsImage.id = image;
                     rsImage.classList.add('rsImage');
-                    rsImage.style.height = '100%';
                     rsImage.alt = '';
-
-                    rsImage.onload = function() {
-                        if (rsImage.width > rsImage.height) document.getElementById(image).style.width = '100%';
-                    };
+                    rsImage.style.height = '100%';
 
                     rsContent.appendChild(rsImage);
                     slides.push(rsContent);

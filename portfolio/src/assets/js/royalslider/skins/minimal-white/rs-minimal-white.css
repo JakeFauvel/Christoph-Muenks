@@ -17,7 +17,6 @@
 * 
 ******************************/
 
-
 /* Background */
 .rsMinW,
 .rsMinW .rsOverflow,
@@ -28,13 +27,11 @@
 	color: #FFF;
 }
 
-
 /***************
 *
 *  1. Arrows
 *
 ****************/
-
 .rsMinW .rsArrow {
 	height: 32px;
 	width: 32px;
@@ -61,7 +58,6 @@
 
 }
 
-
 .rsMinW.rsHor .rsArrowLeft .rsArrowIcn { background-position: -68px -36px; }
 .rsMinW.rsHor .rsArrowRight .rsArrowIcn { background-position: -68px -68px; }
 
@@ -69,7 +65,6 @@
 .rsMinW.rsVer .rsArrowRight .rsArrowIcn { background-position: -100px -68px; }
 
 .rsMinW .rsArrowDisabled .rsArrowIcn { opacity: .3 !important; filter: alpha(opacity=30);  *display: none; }
-
 
 /***************
 *
@@ -109,10 +104,6 @@
 .rsMinW .rsBullet.rsNavSelected span {
 	background: #FFF;
 }
-
-
-
-
 
 /***************
 *
@@ -169,9 +160,6 @@
 .rsMinW .rsTmb {
 	display: block;
 }
-
-
-
 
 /* Thumbnails arrow icons */
 .rsMinW .rsThumbsArrow {
@@ -302,10 +290,6 @@
 	background-image: linear-gradient(to bottom, #ACACAC, #BBB);
 }
 
-
-
-
-
 /***************
 *
 *  5. Fullscreen button
@@ -408,8 +392,6 @@
 	background-color: rgba(0,0,0,0.9);
 }
 
-
-
 /***************
 *
 *  7. Preloader
@@ -426,9 +408,6 @@
 	margin-left:-10px;
 	margin-top:-10px;	
 }
-
-
-
 
 /***************
 *
