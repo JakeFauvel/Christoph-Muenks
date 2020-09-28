@@ -7,22 +7,22 @@
         </div>
 
         <div ref="menu" class="menu" :class="{closed: !hamburgerOpen}">
-            <a class="nav-item" href="/">
+            <g-link class="nav-item" to="/">
                 <div class="nav-item-underline"></div>
                 {{ lang[langPath].projects.toUpperCase() }}
-            </a>
-            <a class="nav-item" href="/products/">
+            </g-link>
+            <g-link class="nav-item" to="/products/">
                 <div class="nav-item-underline"></div>
                 {{ lang[langPath].products.toUpperCase() }}
-            </a>
-            <a class="nav-item" href="/about/">
+            </g-link>
+            <g-link class="nav-item" to="/about/">
                 <div class="nav-item-underline"></div>
                 {{ lang[langPath].about.toUpperCase() }}
-            </a>
-            <a class="nav-item" href="/contact/">
+            </g-link>
+            <g-link class="nav-item" to="/contact/">
                 <div class="nav-item-underline"></div>
                 {{ lang[langPath].contact.toUpperCase() }}
-            </a>
+            </g-link>
             <div class="nav-item-language-underline"></div>
 
             <div class="language-options-container">
@@ -39,7 +39,6 @@
 </template>
 <script>
     import Lang from '~/lang/nav/nav.json';
-    let Velocity = require('velocity-animate');
 
     export default {
         data: function () {
@@ -49,12 +48,18 @@
                 isAnimating: false,
                 activeLanguage: 'de',
                 langPath: 'nav-de',
+                Velocity: null,
             }
         },
 
         mounted() {
             this.setLanguage();
             window.addEventListener('langChanged', this.setLanguage);
+
+            // Only load Velocity if process is on the client side
+            if (process.isClient) {
+               this.Velocity =  require('./VelocityCopy');
+            }
         },
 
         methods: {
@@ -131,24 +136,24 @@
                 this.$emit('hamburgerClick', this.hamburgerOpen);
 
                 // Move first line down to the middle
-                Velocity(lineOne, {translateY: 12}, {duration: 200, easing: 'easeOutElastic', complete: function() {
-                    Velocity(lineOne, {rotateZ: 45}, {duration: 200,  easing: 'easeOutElastic'});
-                }});
+                this.Velocity(lineOne, {translateY: 12}, {duration: 200, easing: 'easeOutElastic', complete: function() {
+                        this.Velocity(lineOne, {rotateZ: 45}, {duration: 200,  easing: 'easeOutElastic'});
+                }.bind(this)});
 
                 // Move third line to the middle and hide
-                Velocity(lineThree, {translateY: -12}, {duration: 200, easing: 'easeOutElastic', complete: function() {
+                this.Velocity(lineThree, {translateY: -12}, {duration: 200, easing: 'easeOutElastic', complete: function() {
                     lineThree.style.display = 'none';
                 }});
 
                 // Rotate line two to finish the X
-                Velocity(lineTwo, {translateY: 0}, {duration: 200, easing: 'easeOutElastic', complete: function() {
-                    Velocity(lineTwo, {rotateZ: -45}, {duration: 200,  easing: 'easeOutElastic'});
-                }});
+                this.Velocity(lineTwo, {translateY: 0}, {duration: 200, easing: 'easeOutElastic', complete: function() {
+                        this.Velocity(lineTwo, {rotateZ: -45}, {duration: 200,  easing: 'easeOutElastic'});
+                }.bind(this)});
 
                 // Display the menu / overflow
                 menu.style.display = 'flex';
                 // Animate the menu / overflow opacity
-                Velocity(menu, {opacity: 1}, {duration: 250});
+                this.Velocity(menu, {opacity: 1}, {duration: 250});
 
                 this.resetIsAnimatingState();
             },
@@ -162,25 +167,25 @@
                 this.$emit('hamburgerClick', this.hamburgerOpen);
 
                 // Animate the first line
-                Velocity(lineOne, {rotateZ: 0}, {duration: 200, easing: 'easeOutElastic', complete: function() {
-                    Velocity(lineOne, {translateY: 0}, {duration: 200, easing: 'easeOutElastic'});
-                }});
+                this.Velocity(lineOne, {rotateZ: 0}, {duration: 200, easing: 'easeOutElastic', complete: function() {
+                        this.Velocity(lineOne, {translateY: 0}, {duration: 200, easing: 'easeOutElastic'});
+                }.bind(this)});
 
                 // Show the second line
                 lineTwo.style.display = 'block';
                 // Animate opacity / hide menu
-                Velocity(menu, {opacity: 0}, {duration: 200, complete: function() {
+                this.Velocity(menu, {opacity: 0}, {duration: 200, complete: function() {
                     menu.style.display = 'none';
                 }});
 
                 // Animate the third line
-                Velocity(lineTwo, {rotateZ: 0}, {duration: 200, easing: 'easeOutElastic', complete: function() {
-                    Velocity(lineTwo, {translateY: 0}, {duration: 200, easing: 'easeOutElastic'});
-                }});
+                this.Velocity(lineTwo, {rotateZ: 0}, {duration: 200, easing: 'easeOutElastic', complete: function() {
+                        this.Velocity(lineTwo, {translateY: 0}, {duration: 200, easing: 'easeOutElastic'});
+                }.bind(this)});
 
                 // Move third line to the middle and hide
                 lineThree.style.display = 'block';
-                Velocity(lineThree, {translateY: 0}, {duration: 200, easing: 'easeOutElastic'});
+                this.Velocity(lineThree, {translateY: 0}, {duration: 200, easing: 'easeOutElastic'});
 
                 this.resetIsAnimatingState();
             },

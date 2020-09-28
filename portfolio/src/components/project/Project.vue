@@ -26,8 +26,6 @@
 </template>
 
 <script>
-    require('../../assets/js/royalslider/jquery-1.8.3.min');
-    require('../../assets/js/royalslider/jquery.royalslider.min');
     import ProjectsLang from '~/lang/projects/projects.json';
     import LeftArrow from '~/components/icons/LeftArrow.vue';
     import RightArrow from '~/components/icons/RightArrow.vue';
@@ -44,6 +42,7 @@
 
         data: function () {
             return {
+                jQuery: null,
                 projectsLang: ProjectsLang,
                 activeLanguage: 'de',
                 project: this.projectInfo,
@@ -56,9 +55,15 @@
         },
 
         mounted() {
+            // Only load Velocity if process is on the client side
+            if (process.isClient) {
+                require('../../assets/js/royalslider/jquery-1.8.3.min');
+                require('../../assets/js/royalslider/jquery.royalslider.min');
+            }
+
+            this.checkSelected();
             this.setLanguage();
             this.initialiseRoyalSlider();
-            this.checkSelected();
         },
 
         methods: {

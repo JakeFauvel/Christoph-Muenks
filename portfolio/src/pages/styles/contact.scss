@@ -97,6 +97,14 @@
       border: solid 1px #040504;
     }
   }
+
+  input.not-valid.user-initiated {
+    border: solid 1px #FF8687;
+  }
+
+  textarea.not-valid.user-initiated {
+    border: solid 1px #FF8687;
+  }
 }
 
 .nameFieldContainer {
@@ -124,6 +132,7 @@
 }
 
 .formSubmitButton {
+  -webkit-appearance: none !important;
   font-family: inherit;
   font-size: inherit;
   width: 100%;

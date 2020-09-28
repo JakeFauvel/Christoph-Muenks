@@ -6,8 +6,7 @@
 
 module.exports = {
   siteName: 'Christoph Münks - Blacksmith',
+  siteUrl: 'https://jakefauvel.github.io',
+  pathPrefix: '/Christoph-Muenks',
   plugins: [],
-  chainWebpack: config => {
-    config.resolve.alias.set('@images', '@/assets/images')
-  },
 };

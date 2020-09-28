@@ -21,14 +21,16 @@ $near-black: #070707;
   }
 
   .selected-language {
-    display: flex;
+    display: block;
 
     span {
+      display: inline-block;
       padding-right: 5px;
     }
   }
 
   .dropdown-icon-container {
+    display: inline-block;
     width: 12px;
     transform: rotate(90deg);
     -webkit-transition: -webkit-transform .3s ease-in-out;
