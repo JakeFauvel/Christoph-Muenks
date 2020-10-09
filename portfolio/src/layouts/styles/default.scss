@@ -85,7 +85,7 @@ html, body {
   }
 }
 
-.nav__link {
+.nav__link, .nav__link.main {
   font-family: 'Nobel-Book', sans-serif;
   font-weight: 300;
   font-stretch: normal;
@@ -106,15 +106,39 @@ html, body {
   }
 }
 
-a.nav__link.rightLink:hover {
-  padding-bottom: 5px;
+/*
+  Underline effect
+  Reference: https://codepen.io/colloque/pen/bDgmx
+ */
+a.nav__link.rightLink:after {
+  content: '';
+  top: -45%;
+  position: relative;
+  display: inline-block;
+  height: 0.5em;
+  width: 100%;
   border-bottom: 1px solid;
-  transition: border-width 0.2s ease;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
 }
+
+a.nav__link.rightLink:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
 
 .nav__link.active--exact {
   font-family: 'Nobel', sans-serif;
   font-weight: normal;
+}
+
+.nav__link.rightLink.active--exact:after {
+  display: none;
 }
 
 .nav__link:first-of-type {
@@ -124,25 +148,12 @@ a.nav__link.rightLink:hover {
 .nav__link.main {
   font-family: 'Nobel', sans-serif;
   color: $near-black;
-  font-size: 20px;
   position: relative;
   margin-left: 0;
   font-weight: normal;
 
-  @media only screen and (min-width: 768px) {
-    font-size: 22px;
-  }
-
-  @media only screen and (min-width: 820px) {
-    font-size: 24px;
-  }
-
   @media only screen and (max-width: 768px) {
     display: initial;
-  }
-
-  @media only screen and (min-width: 1280px) {
-    font-size: 36px;
   }
 }
 
