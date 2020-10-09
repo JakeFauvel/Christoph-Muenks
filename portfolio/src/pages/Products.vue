@@ -29,8 +29,8 @@
 
         mounted() {
             document.body.style.overflow = 'initial';
-            this.setLanguage();
-            window.addEventListener('langChanged', this.setLanguage);
+            // this.setLanguage();
+            // window.addEventListener('langChanged', this.setLanguage);
             window.addEventListener('overlayClosed', this.toggleOverlay);
         },
 

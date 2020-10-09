@@ -27,9 +27,9 @@
         },
 
         mounted() {
-            this.setInitialActiveLang();
+            // this.setInitialActiveLang();
             this.setSecondary();
-            window.addEventListener('langChanged', this.setLanguage);
+            // window.addEventListener('langChanged', this.setLanguage);
         },
 
         methods: {

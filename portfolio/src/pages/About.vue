@@ -33,8 +33,8 @@
         },
 
         mounted() {
-            this.setLanguage();
-            window.addEventListener('langChanged', this.setLanguage);
+            // this.setLanguage();
+            // window.addEventListener('langChanged', this.setLanguage);
             document.body.style.overflow = 'initial';
         },
 

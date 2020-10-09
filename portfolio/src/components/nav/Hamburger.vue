@@ -53,8 +53,8 @@
         },
 
         mounted() {
-            this.setLanguage();
-            window.addEventListener('langChanged', this.setLanguage);
+            // this.setLanguage();
+            // window.addEventListener('langChanged', this.setLanguage);
 
             // Only load Velocity if process is on the client side
             if (process.isClient) {

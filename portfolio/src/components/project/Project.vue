@@ -62,7 +62,7 @@
             }
 
             this.checkSelected();
-            this.setLanguage();
+            // this.setLanguage();
             this.initialiseRoyalSlider();
         },
 

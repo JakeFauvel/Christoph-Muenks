@@ -14,7 +14,8 @@
                         <g-link class="nav__link rightLink" to="/products/">{{ lang[langPath].products.toUpperCase() }}</g-link>
                         <g-link class="nav__link rightLink" to="/about/">{{ lang[langPath].about.toUpperCase() }}</g-link>
                         <g-link class="nav__link rightLink" to="/contact/">{{ lang[langPath].contact.toUpperCase() }}</g-link>
-                        <switcher></switcher>
+                        <!-- Switcher component-->
+                        <!--<switcher></switcher>-->
                     </div>
                 </div>
             </nav>
@@ -46,14 +47,14 @@
         data: function () {
             return {
                 lang: Lang,
-                activeLanguage: 'en',
-                langPath: 'nav-en'
+                activeLanguage: 'de',
+                langPath: 'nav-de'
             }
         },
 
         mounted() {
-            this.setLanguage();
-            window.addEventListener('langChanged', this.setLanguage);
+            // this.setLanguage();
+            // window.addEventListener('langChanged', this.setLanguage);
         },
 
         methods: {
