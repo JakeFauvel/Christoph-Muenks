@@ -2,10 +2,9 @@
     <div ref="projectContainer" class="project-container">
         <div @mouseover="showOverlay" @mouseleave="hideOverlay" class="image-wrapper">
             <img style="width: 100%" :src="project.src" :alt="project.alt"/>
-            <transition name="fade">
-                <div ref="overlayText" class="overlayText">{{ project['short-description'] }}</div>
-            </transition>
         </div>
+
+        <div ref="overlayText" class="overlayText">{{ project['short-description'] }}</div>
     </div>
 </template>
 <script>
