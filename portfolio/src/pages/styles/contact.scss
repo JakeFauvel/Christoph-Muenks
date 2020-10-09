@@ -22,6 +22,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  form {
+    margin-top: 25px;
+    width: 80%;
+  }
 }
 
 .contactTextContainer {
