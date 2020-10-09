@@ -18,8 +18,8 @@
     "first-name": "Vorname",
     "last-name": "Nachname",
     "email": "E-Mail-Addresse",
-    "subject": "Gegenstand",
-    "message": "Botschaft",
-    "submit":  "Bestätigen"
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "submit":  "Senden"
   }
 }
