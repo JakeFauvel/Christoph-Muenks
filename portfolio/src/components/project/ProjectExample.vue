@@ -17,8 +17,8 @@
                 <h2 class="projectHeader">{{ project.title }}</h2>
             </div>
 
-            <div ref="royalSliderElement" id="full-width-slider" class="royalSlider heroSlider rsMinW">
-                <!-- Gallery images appended dynamically based on project index -->
+            <div class="imageContainer">
+                <img v-for="image in project['additionalImages']" :src="image"  alt="">
             </div>
 
             <div class="textDescription">
@@ -66,7 +66,6 @@
 
             this.checkSelected();
             // this.setLanguage();
-            this.initialiseRoyalSlider();
         },
 
         methods: {
@@ -81,50 +80,6 @@
                 // the language change accross the site
                 let event = new CustomEvent("overlayClosed", {});
                 dispatchEvent(event);
-            },
-
-            initialiseRoyalSlider() {
-                let slides = this.assembleSlides();
-                let slideString = '';
-                slides.forEach(function(slide) {
-                    slideString = slideString + slide.outerHTML;
-                });
-
-                jQuery('.royalSlider').royalSlider('destroy').empty().royalSlider({
-                    slides: slideString,
-                    autoScaleSlider: true,
-                    arrowsNav: true,
-                    keyboardNavEnabled: true,
-                    imageScaleMode: 'fit',
-                    arrowsNavAutoHide: false,
-                    controlNavigation: 'none',
-                    thumbsFitInViewport: false,
-                    navigateByClick: true,
-                    startSlideId: 0,
-                    autoPlay: false,
-                    transitionType: 'move'
-                });
-            },
-
-            assembleSlides() {
-                let slides = [];
-
-                this.project['additionalImages'].forEach(function (image) {
-                    let rsContent = document.createElement('div');
-                    rsContent.classList.add('rsContent');
-
-                    let rsImage = document.createElement('img');
-                    rsImage.src = image;
-                    rsImage.id = image;
-                    rsImage.classList.add('rsImage');
-                    rsImage.alt = '';
-                    rsImage.style.height = '100%';
-
-                    rsContent.appendChild(rsImage);
-                    slides.push(rsContent);
-                });
-
-                return slides;
             },
 
             checkSelected() {
@@ -167,7 +122,6 @@
                 if (!this.leftArrowDisabled) {
                     this.index = parseInt(this.index) - 1;
                     if (this.projectsLang[this.activeLanguage][this.index]) this.project = this.projectsLang[this.activeLanguage][this.index];
-                    this.initialiseRoyalSlider();
                     this.checkSelected();
                 }
             },
@@ -176,7 +130,6 @@
                 if (!this.rightArrowDisabled) {
                     this.index = parseInt(this.index) + 1;
                     if (this.projectsLang[this.activeLanguage][this.index]) this.project = this.projectsLang[this.activeLanguage][this.index];
-                    this.initialiseRoyalSlider();
                     this.checkSelected();
                 }
             },
@@ -185,7 +138,5 @@
 </script>
 
 <style lang="scss" scoped>
-    @import '../../assets/js/royalslider/royalslider.css';
-    @import '../../assets/js/royalslider/skins/minimal-white/rs-minimal-white.css';
     @import './styles/project';
 </style>

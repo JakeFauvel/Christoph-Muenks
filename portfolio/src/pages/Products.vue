@@ -7,7 +7,7 @@
                       v-on:click.native="toggleOverlay(productInfo, i)">
             </projects>
 
-            <project v-if="overlayActive" :projectInfo="productInfo" :projectIndex="productIndex" page="products" class="projectOverlay"></project>
+            <project v-if="overlayActive" :projectInfo="productInfo" :projectIndex="productIndex" page="products" class="productOverlay"></project>
         </div>
     </Layout>
 </template>
