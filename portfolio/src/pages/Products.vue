@@ -15,7 +15,7 @@
 <script>
     import ProductsLang from '~/lang/pages/products.json';
     import Projects from '~/components/project/Projects.vue';
-    import Project from '~/components/project/Project.vue';
+    import Project from '~/components/project/ProjectScrolling.vue';
 
     export default {
         metaInfo: {

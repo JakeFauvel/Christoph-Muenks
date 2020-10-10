@@ -15,7 +15,7 @@
 <script>
     import Lang from '~/lang/pages/index.json'
     import Projects from '~/components/project/Projects.vue';
-    import Project from '~/components/project/ProjectExample.vue';
+    import Project from '~/components/project/ProjectScrolling.vue';
     import ProjectsLang from '~/lang/projects/projects.json';
 
     export default {

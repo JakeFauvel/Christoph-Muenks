@@ -17,7 +17,7 @@
                 <h2 class="projectHeader">{{ project.title }}</h2>
             </div>
 
-            <div class="imageContainer">
+            <div ref="imageContainer" id="imageContainer" class="imageContainer">
                 <img v-for="image in project['additionalImages']" :src="image"  alt="">
             </div>
 
@@ -33,6 +33,7 @@
     import LeftArrow from '~/components/icons/LeftArrow.vue';
     import RightArrow from '~/components/icons/RightArrow.vue';
     import CloseIcon from '~/components/icons/CloseIcon.vue';
+    import ImagesLoaded from 'imagesloaded';
 
     export default {
         props: ['projectInfo', 'page', 'projectIndex'],
@@ -54,17 +55,13 @@
                 availableGalleryHeight: 0,
                 leftArrowDisabled: false,
                 rightArrowDisabled: false,
+                imageOrientationsArray: [],
             }
         },
 
         mounted() {
-            // Only load Velocity if process is on the client side
-            if (process.isClient) {
-                require('../../assets/js/royalslider/jquery-1.8.3.min');
-                require('../../assets/js/royalslider/jquery.royalslider.min');
-            }
-
             this.checkSelected();
+            ImagesLoaded(this.$refs.imageContainer, this.checkImageOrientations);
             // this.setLanguage();
         },
 
@@ -73,6 +70,14 @@
                 if (localStorage.getItem("language") !== null) {
                     this.activeLanguage = localStorage.getItem("language");
                 }
+            },
+
+            checkImageOrientations() {
+                document.getElementById('imageContainer').children.forEach(function(image) {
+                    if (image.naturalHeight > image.naturalWidth) {
+                        image.style.maxWidth = '65%';
+                    }
+                });
             },
 
             overlayClose() {
