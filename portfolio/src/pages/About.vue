@@ -40,6 +40,9 @@
             // this.setLanguage();
             // window.addEventListener('langChanged', this.setLanguage);
             document.body.style.overflow = 'initial';
+
+            let event = new CustomEvent("routeChanged", {});
+            dispatchEvent(event);
         },
 
         beforeDestroy() {

@@ -7,7 +7,7 @@ html, body {
   margin: 0;
 }
 
-#app {
+main, #app {
   height: 100%;
 }
 
@@ -161,17 +161,34 @@ a.nav__link.rightLink:hover:after {
   z-index: 2;
 }
 
-footer {
-  background: #222222;
-  height: 100px;
-  color: #FFF;
-  -webkit-appearance: none !important;
-}
-
 .fade-enter-active {
   transition: opacity .5s;
 }
 
 .fade-enter {
   opacity: 0;
+}
+
+footer {
+  font-family: 'Nobel-Regular', sans-serif;
+  font-size: 14px;
+  display: none;
+  width: 100%;
+  color: #888888;
+  margin: 2% 5%;
+  bottom: 0;
+  position: fixed;
+
+  a {
+    cursor: pointer;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    margin: 2% 10%;
+    font-size: 16px;
+  }
+
+  @media only screen and (min-width: 1700px) {
+    margin: 2% 21%;
+  }
 }

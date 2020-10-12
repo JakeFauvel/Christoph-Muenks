@@ -34,6 +34,9 @@
             // this.setLanguage();
             // window.addEventListener('langChanged', this.setLanguage);
             window.addEventListener('overlayClosed', this.toggleOverlay);
+
+            let event = new CustomEvent("routeChanged", {});
+            dispatchEvent(event);
         },
 
         data: function () {

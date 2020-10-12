@@ -1,6 +1,6 @@
 <template>
     <div class="layout">
-        <header class="header">
+        <header ref="header" class="header">
             <hamburger @hamburgerClick="onHamburgerClick"/>
 
             <nav class="nav">
@@ -22,12 +22,20 @@
         </header>
 
         <transition name="fade" appear>
-            <main>
+            <main ref="main">
                  <slot></slot>
             </main>
         </transition>
 
+        <transition name="fade">
+            <impressum v-if="overlayActive" ></impressum>
+        </transition>
+
         <cookie-message v-show="shouldShowCookieMessage" :cookieMessage="lang[langPath].cookieMessage"/>
+
+        <footer ref="footer" id="importantInfo" class="importantInfo">
+            <a @click="toggleOverlay">Impressum | Datenschutz</a>
+        </footer>
     </div>
 </template>
 
@@ -42,14 +50,17 @@
 <script>
     import Hamburger from '~/components/nav/Hamburger.vue';
     import Switcher from '~/components/nav/Switcher.vue';
+    import Impressum from '~/components/impressum/Impressum.vue';
     import CookieMessage from '~/components/cookie/CookieMessage.vue';
     import Lang from '~/lang/nav/nav.json';
+    import ImagesLoaded from "imagesloaded";
 
     export default {
         components: {
             Hamburger,
             Switcher,
-            CookieMessage
+            CookieMessage,
+            Impressum
         },
 
         data: function () {
@@ -58,14 +69,29 @@
                 activeLanguage: 'de',
                 langPath: 'nav-de',
                 shouldShowCookieMessage: false,
+                overlayActive: false,
             }
         },
 
         mounted() {
             // this.setLanguage();
             // window.addEventListener('langChanged', this.setLanguage);
-            window.addEventListener('cookiesAccepted', this.checkIfCookiesAccepted);
+            window.addEventListener('cookiesAccepted', this.checkIfCookiesAccepted, {passive: true});
             this.checkIfCookiesAccepted();
+            ImagesLoaded(this.$refs.main, this.setInitialImportantInfoState);
+
+            window.addEventListener('routeChanged', this.setBodyHeight, {passive: true});
+            window.addEventListener('resize', this.setBodyHeight, {passive: true});
+            window.addEventListener('impressumOverlayClosed', this.toggleOverlay, {passive: true});
+
+            if (document.body.offHeight > window.innerHeight) {
+                let importantInfo = document.getElementById('importantInfo');
+                importantInfo.style.display = 'initial';
+            }
+
+            window.onscroll = function() {
+                this.updateImportantInfoOnScroll();
+            }.bind(this);
         },
 
         methods: {
@@ -75,6 +101,31 @@
                 }
 
                 this.langPath = 'nav-' + this.activeLanguage;
+            },
+
+            setInitialImportantInfoState() {
+                this.setBodyHeight();
+                if (document.body.scrollHeight === document.body.offsetHeight) this.$refs.footer.style.display = 'initial';
+            },
+
+            setBodyHeight() {
+                document.body.style.height = '100%';
+
+                if (document.body.scrollHeight > window.innerHeight) {
+                    document.body.style.height = document.body.scrollHeight - this.$refs.header.style.height - this.$refs.header.clientHeight + 'px';
+                } else {
+                    document.body.style.height = '100%';
+                }
+            },
+
+            updateImportantInfoOnScroll() {
+                let importantInfo = document.getElementById('importantInfo');
+
+                if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+                    importantInfo.style.display = 'initial';
+                } else {
+                    importantInfo.style.display = 'none';
+                }
             },
 
             onHamburgerClick() {
@@ -88,9 +139,18 @@
                 }
             },
 
+            toggleOverlay() {
+                if (this.overlayActive) {
+                    document.body.style.overflow = 'initial';
+                    this.overlayActive = false;
+                } else {
+                    document.body.style.overflow = 'hidden';
+                    this.overlayActive = true;
+                }
+            },
+
             checkIfCookiesAccepted() {
                 this.shouldShowCookieMessage = localStorage.getItem("cookiesAccepted") === null;
-                console.log('shouldShowCookieMessage', this.shouldShowCookieMessage);
             },
         }
     }
