@@ -13,17 +13,21 @@
         </div>
 
         <div class="content">
-            <div class="textTitle">
-                <h2 class="projectHeader">{{ project.title }}</h2>
-            </div>
+                <div class="textTitle">
+                    <transition name="fade">
+                        <h2 class="projectHeader">{{ project.title }}</h2>
+                    </transition>
+                </div>
 
-            <div ref="imageContainer" id="imageContainer" class="imageContainer">
-                <img v-for="image in project['additionalImages']" :src="image"  alt="">
-            </div>
+                <div ref="imageContainer" id="imageContainer" class="imageContainer">
+                    <transition-group fade="name">
+                        <img v-for="image in project['additionalImages']" :key="image" :src="image" alt="">
+                    </transition-group>
+                </div>
 
-            <div class="textDescription">
-                <p class="projectInfo">{{ project['long-description'] }}</p>
-            </div>
+                <div class="textDescription">
+                    <p class="projectInfo">{{ project['long-description'] }}</p>
+                </div>
         </div>
     </div>
 </template>
@@ -61,7 +65,7 @@
 
         mounted() {
             this.checkSelected();
-            ImagesLoaded(this.$refs.imageContainer, this.checkImageOrientations);
+            // ImagesLoaded(this.$refs.imageContainer, this.checkImageOrientations);
             // this.setLanguage();
         },
 
@@ -76,6 +80,8 @@
                 document.getElementById('imageContainer').children.forEach(function(image) {
                     if (image.naturalHeight > image.naturalWidth) {
                         image.style.maxWidth = '65%';
+                    } else {
+                        image.style.maxWidth = '100%';
                     }
                 });
             },
@@ -111,6 +117,8 @@
                     this.leftArrowDisabled = false;
                     this.rightArrowDisabled = true;
                 }
+
+                // ImagesLoaded(this.$refs.imageContainer, this.checkImageOrientations);
             },
 
             disableArrow(arrow) {
