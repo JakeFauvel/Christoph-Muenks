@@ -11,7 +11,11 @@
                 {{ lang[langPath]['about-para-two'] }}
             </p>
 
-            <img src="../../src/assets/images/about/christoph-hands.png" alt="Blacksmith hands">
+            <img src="http://www.schmiede-muenks.de/img/werkstatt/haende.jpg" alt="Blacksmith hands">
+            <img src="http://www.schmiede-muenks.de/img/werkstatt/werkstatt-1.jpg" alt="Blacksmith hands">
+            <img src="http://www.schmiede-muenks.de/img/werkstatt/werkstatt-6.jpg" alt="Blacksmith hands">
+            <img src="http://www.schmiede-muenks.de/img/werkstatt/schmiede_01.jpg" alt="Blacksmith hands">
+            <img src="http://www.schmiede-muenks.de/img/werkstatt/schmiede-02.jpg" alt="Blacksmith hands">
         </div>
     </Layout>
 </template>

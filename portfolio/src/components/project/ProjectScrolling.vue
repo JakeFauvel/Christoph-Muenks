@@ -65,7 +65,7 @@
 
         mounted() {
             this.checkSelected();
-            // ImagesLoaded(this.$refs.imageContainer, this.checkImageOrientations);
+            ImagesLoaded(this.$refs.imageContainer, this.checkImageOrientations);
             // this.setLanguage();
         },
 
@@ -77,7 +77,7 @@
             },
 
             checkImageOrientations() {
-                document.getElementById('imageContainer').children.forEach(function(image) {
+                document.getElementById('imageContainer').children[0].children.forEach(function(image) {
                     if (image.naturalHeight > image.naturalWidth) {
                         image.style.maxWidth = '65%';
                     } else {
@@ -118,7 +118,7 @@
                     this.rightArrowDisabled = true;
                 }
 
-                // ImagesLoaded(this.$refs.imageContainer, this.checkImageOrientations);
+                ImagesLoaded(this.$refs.imageContainer, this.checkImageOrientations);
             },
 
             disableArrow(arrow) {

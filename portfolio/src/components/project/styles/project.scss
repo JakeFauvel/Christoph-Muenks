@@ -74,17 +74,17 @@
     }
 
     @media only screen and (min-width: 768px) {
-      width: 75%;
+      width: 90%;
       margin: 120px auto 8% auto;
     }
 
     @media only screen and (min-width: 1280px) {
-      width: 60%;
+      width: 80%;
       margin: 120px auto 5% auto;
     }
 
     @media only screen and (min-width: 1920px) {
-      width: 66%;
+      width: 58%;
     }
 
     .imageContainer {
@@ -96,7 +96,7 @@
       span > img {
         width: 100%;
         height: 100%;
-        margin-bottom: 15%;
+        margin-bottom: 12%;
 
         &:last-of-type {
           margin-bottom: 0;

@@ -42,5 +42,10 @@
 
   img {
     width: 100%;
+    padding-bottom: 8%;
+  }
+
+  img:last-of-type {
+    padding-bottom: 2%;
   }
 }
