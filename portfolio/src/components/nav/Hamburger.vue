@@ -1,6 +1,6 @@
 <template>
     <div class="menu-container">
-        <div v-on:click="hamburgerClick" class="hamburger-container">
+        <div v-on:click="hamburgerClick" class="hamburger-container" :class="{open: hamburgerOpen}">
             <div ref="lineOne" class="line-one" :class="{open: hamburgerOpen}"></div>
             <div ref="lineTwo" class="line-two" :class="{open: hamburgerOpen}"></div>
             <div ref="lineThree" class="line-three" :class="{open: hamburgerOpen}"></div>

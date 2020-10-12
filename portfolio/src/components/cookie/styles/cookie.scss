@@ -1,0 +1,39 @@
+.cookieContainer {
+  font-family: 'Nobel', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  height: 44px;
+  background: #222222;
+  width: 100%;
+  color: #FFF;
+
+  .cookieMessage {
+    font-size: 14px;
+    max-width: 65%;
+    @media only screen and (min-width: 768px) {
+      font-size: 16px;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      font-size: 18px;
+    }
+  }
+
+  .cookieAccept {
+    -webkit-appearance: none !important;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    height: 80%;
+    width: 5%;
+    min-width: 40px;
+    max-height: 30px;
+    text-align: center;
+    cursor: pointer;
+  }
+}

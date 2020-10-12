@@ -15,7 +15,7 @@ $white: #FFF;
   position: absolute;
   top: 37%;
   height: 25px;
-  right: 7.5%;
+  right: 5%;
   z-index: 2;
   cursor: pointer;
 }
@@ -84,6 +84,10 @@ $white: #FFF;
     @media only screen and (min-width: 768px) {
       font-size: 52px;
     }
+  }
+
+  .nav-item.active--exact {
+    opacity: 0.4;
   }
 
   .nav-item:first-of-type {

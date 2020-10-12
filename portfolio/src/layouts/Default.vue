@@ -21,7 +21,13 @@
             </nav>
         </header>
 
-        <slot></slot>
+        <transition name="fade" appear>
+            <main>
+                 <slot></slot>
+            </main>
+        </transition>
+
+        <cookie-message v-show="shouldShowCookieMessage" :cookieMessage="lang[langPath].cookieMessage"/>
     </div>
 </template>
 
@@ -36,25 +42,30 @@
 <script>
     import Hamburger from '~/components/nav/Hamburger.vue';
     import Switcher from '~/components/nav/Switcher.vue';
+    import CookieMessage from '~/components/cookie/CookieMessage.vue';
     import Lang from '~/lang/nav/nav.json';
 
     export default {
         components: {
             Hamburger,
-            Switcher
+            Switcher,
+            CookieMessage
         },
 
         data: function () {
             return {
                 lang: Lang,
                 activeLanguage: 'de',
-                langPath: 'nav-de'
+                langPath: 'nav-de',
+                shouldShowCookieMessage: false,
             }
         },
 
         mounted() {
             // this.setLanguage();
             // window.addEventListener('langChanged', this.setLanguage);
+            window.addEventListener('cookiesAccepted', this.checkIfCookiesAccepted);
+            this.checkIfCookiesAccepted();
         },
 
         methods: {
@@ -75,7 +86,12 @@
                 } else {
                     body.style.overflow = 'initial';
                 }
-            }
+            },
+
+            checkIfCookiesAccepted() {
+                this.shouldShowCookieMessage = localStorage.getItem("cookiesAccepted") === null;
+                console.log('shouldShowCookieMessage', this.shouldShowCookieMessage);
+            },
         }
     }
 </script>

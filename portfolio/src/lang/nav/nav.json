@@ -4,7 +4,8 @@
     "contact": "contact",
     "home": "home",
     "products": "products",
-    "projects": "projects"
+    "projects": "projects",
+    "cookieMessage": "Mit der Nutzung der Website stimmen Sie der Verwendung von Cookies zu."
   },
 
   "nav-de": {
@@ -12,6 +13,7 @@
     "contact": "kontakt",
     "home": "startseite",
     "products": "produkte",
-    "projects": "referenzen"
+    "projects": "referenzen",
+    "cookieMessage": "Mit der Nutzung der Website stimmen Sie der Verwendung von Cookies zu."
   }
 }
