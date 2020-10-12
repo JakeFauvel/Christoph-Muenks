@@ -13,22 +13,18 @@ $white: #FFF;
 
 .hamburger-container {
   position: absolute;
-  top: 35px;
-  right: 5%;
+  top: 37%;
+  height: 25px;
+  right: 7.5%;
   z-index: 2;
   cursor: pointer;
 }
 
 .line-one, .line-two, .line-three {
   background: $near-black;
-  border-radius: 6px;
-  width: 35px;
-  height: 3px;
+  width: 25px;
+  height: 2px;
   transform-origin: center;
-
-  @media only screen and (min-width: 375px) {
-    width: 40px;
-  }
 
   @media only screen and (min-width: 768px) {
     display: none !important;
@@ -76,7 +72,8 @@ $white: #FFF;
     font-family: 'Nobel-Book', sans-serif;
     font-size: 20px;
     color: $near-black;
-    text-align: center;
+    text-align: left;
+    margin-left: 5%;
     margin-top: 50px;
     transition: font-size 0.3s ease-in-out;
 
@@ -99,10 +96,8 @@ $white: #FFF;
 
   .nav-item-underline, .nav-item-language-underline {
     width: 64px;
-    height: 1px;
+    height: 2px;
     background: $near-black;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
     top: -23px;
   }

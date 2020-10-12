@@ -29,7 +29,8 @@ html, body {
   .left, .right {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 5%;
   }
 
   .left {
@@ -37,7 +38,6 @@ html, body {
 
     @media only screen and (min-width: 375px) {
       width: 100%;
-      padding-left: initial;
     }
 
     @media only screen and (min-width: 768px) {

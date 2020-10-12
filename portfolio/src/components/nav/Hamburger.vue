@@ -22,18 +22,17 @@
             <g-link class="nav-item" to="/contact/">
                 <div class="nav-item-underline"></div>
                 {{ lang[langPath].contact.toUpperCase() }}
+                <div class="nav-item-language-underline"></div>
             </g-link>
-            <div class="nav-item-language-underline"></div>
 
-            <div class="language-options-container">
-                <a ref="langEN" @click="enLanguageSelect" class="language-option">
-                    EN
-                </a>
-
-                <a ref="langDE" @click="deLanguageSelect" class="language-option">
-                    DE
-                </a>
-            </div>
+            <!--<div class="language-options-container">-->
+                <!--<a ref="langEN" @click="enLanguageSelect" class="language-option">-->
+                    <!--EN-->
+                <!--</a>-->
+                <!--<a ref="langDE" @click="deLanguageSelect" class="language-option">-->
+                    <!--DE-->
+                <!--</a>-->
+            <!--</div>-->
         </div>
     </div>
 </template>
@@ -76,7 +75,7 @@
                 let lineTwo = this.$refs.lineTwo;
                 let lineThree = this.$refs.lineThree;
                 let menu = this.$refs.menu;
-                this.getActiveLanguage();
+                // this.getActiveLanguage();
 
                 if (!this.hamburgerOpen) {
                     this.openHamburger(lineOne, lineTwo, lineThree, menu);
@@ -136,13 +135,13 @@
                 this.$emit('hamburgerClick', this.hamburgerOpen);
 
                 // Move first line down to the middle
-                this.Velocity(lineOne, {translateY: 12}, {duration: 200, easing: 'easeOutElastic', complete: function() {
+                this.Velocity(lineOne, {translateY: 10}, {duration: 200, easing: 'easeOutElastic', complete: function() {
                         this.Velocity(lineOne, {rotateZ: 45}, {duration: 200,  easing: 'easeOutElastic'});
                 }.bind(this)});
 
                 // Move third line to the middle and hide
-                this.Velocity(lineThree, {translateY: -12}, {duration: 200, easing: 'easeOutElastic', complete: function() {
-                    lineThree.style.display = 'none';
+                this.Velocity(lineThree, {translateY: -10}, {duration: 200, easing: 'easeOutElastic', complete: function() {
+                    lineThree.style.display = 'none';10
                 }});
 
                 // Rotate line two to finish the X
