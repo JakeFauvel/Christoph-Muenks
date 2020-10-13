@@ -104,7 +104,7 @@
             },
 
             setInitialImportantInfoState() {
-                if (window.innerHeight === document.body.offsetHeight) {
+                if (window.innerHeight >= document.body.offsetHeight) {
                     this.$refs.footer.style.display = 'initial';
                 } else {
                     this.$refs.footer.style.display = 'none';
