@@ -93,8 +93,9 @@
       display: flex;
       flex-direction: column;
 
-      span > img {
+      img {
         margin-bottom: 12%;
+        width: 100%;
 
         &:last-of-type {
           margin-bottom: 0;
