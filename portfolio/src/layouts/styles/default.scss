@@ -65,6 +65,7 @@ main, #app {
       display: flex;
       justify-content: flex-end;
       max-height: 22px;
+      align-items: baseline;
 
       @media only screen and (min-width: 1024px) {
         max-height: 32px;
