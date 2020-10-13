@@ -28,6 +28,8 @@
 
   .cookieAccept {
     -webkit-appearance: none !important;
+    -moz-appearance: none;
+    appearance: none;
     font-family: inherit;
     font-size: inherit;
     border: none;
