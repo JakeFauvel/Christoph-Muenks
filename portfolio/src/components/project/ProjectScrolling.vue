@@ -1,22 +1,26 @@
 <template>
     <div class="projectOverlay">
         <div class="controls">
-            <div @click="leftArrowClick" class="left">
-                <left-arrow ref="leftArrow" class="arrow-icon"/>
+            <div class="left">
+                <div ref="textTitle" class="textTitle">
+                    <h2 class="projectHeader">{{ project.title }}</h2>
+                </div>
             </div>
-            <div @click="overlayClose" class="close">
-                <close-icon class="close-icon"/>
-            </div>
-            <div @click="rightArrowClick" class="right">
-                <right-arrow ref="rightArrow" class="arrow-icon"/>
+
+            <div class="right">
+                <div @click="leftArrowClick" class="leftArrow">
+                    <left-arrow ref="leftArrow" class="arrow-icon"/>
+                </div>
+                <div @click="overlayClose" class="close">
+                    <close-icon class="close-icon"/>
+                </div>
+                <div @click="rightArrowClick" class="rightArrow">
+                    <right-arrow ref="rightArrow" class="arrow-icon"/>
+                </div>
             </div>
         </div>
 
         <div ref="content" class="content">
-                <div ref="textTitle" class="textTitle">
-                    <h2 class="projectHeader">{{ project.title }}</h2>
-                </div>
-
                 <div ref="imageContainer" id="imageContainer" class="imageContainer">
                     <transition-group fade="name">
                         <img v-for="image in project['additionalImages']" :key="image" :src="image" alt="">
