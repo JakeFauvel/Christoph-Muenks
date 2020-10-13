@@ -6,7 +6,7 @@
   left: 0;
   z-index: 10;
   background: #FFF;
-  overflow: auto;
+  overflow: hidden;
 
   .close {
     position: absolute;
@@ -47,7 +47,8 @@
     font-family: 'Nobel-Book', sans-serif;
 
     .rightSide {
-      padding-bottom: 100px;
+      overflow: auto;
+      height: calc(100vh - 120px);
     }
 
     @media only screen and (min-width: 768px) {
@@ -77,6 +78,7 @@
 
     .block-two {
       margin-top: 20px;
+      overflow: auto;
     }
   }
 }
