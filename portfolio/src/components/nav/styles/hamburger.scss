@@ -76,6 +76,7 @@ $white: #FFF;
     margin-left: 5%;
     margin-top: 50px;
     transition: font-size 0.3s ease-in-out;
+    font-weight: 300;
 
     &:hover {
       transition: font-size 0.3s ease-in-out;
@@ -87,7 +88,8 @@ $white: #FFF;
   }
 
   .nav-item.active--exact {
-    opacity: 0.4;
+    font-family: 'Nobel-Regular', sans-serif;
+    font-weight: normal;
   }
 
   .nav-item:first-of-type {
