@@ -94,12 +94,23 @@
       flex-direction: column;
 
       span > img {
-        width: 100%;
         margin-bottom: 12%;
 
         &:last-of-type {
           margin-bottom: 0;
         }
+      }
+
+      .portrait {
+        width: 100%;
+
+        @media only screen and (min-width: 768px) {
+          max-width: 65%;
+        }
+      }
+
+      .landscape {
+        width: 100%;
       }
     }
   }

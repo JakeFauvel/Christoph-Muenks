@@ -77,9 +77,9 @@
             checkImageOrientations() {
                 document.getElementById('imageContainer').children[0].children.forEach(function(image) {
                     if (image.naturalHeight > image.naturalWidth) {
-                        image.style.maxWidth = '65%';
+                        image.classList.add('portrait');
                     } else {
-                        image.style.maxWidth = '100%';
+                        image.classList.add('landscape');
                     }
                 });
             },
