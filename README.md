@@ -1,5 +1,4 @@
 # Christoph Muenks Portfolio
-####Portfolio for Christoph Münks
 
 Gridsome and Vue.js build small portfolio site. Single page site built with a default layout and slot for the content to dynamically load.
 
