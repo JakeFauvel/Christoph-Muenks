@@ -8,5 +8,12 @@ module.exports = {
   siteName: 'Christoph Münks - Blacksmith',
   siteUrl: 'https://jakefauvel.github.io',
   pathPrefix: '/Christoph-Muenks',
-  plugins: [],
+  plugins: [
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-180333506-1'
+      }
+    }
+  ]
 };

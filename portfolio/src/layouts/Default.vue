@@ -113,10 +113,12 @@
             },
 
             setBodyHeight() {
+                let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+                let heightToRemove = isSafari ? this.$refs.header.style.height : 0;
                 document.body.style.height = '100%';
 
                 if (document.body.scrollHeight > window.innerHeight) {
-                    document.body.style.height = document.body.scrollHeight - this.$refs.header.style.height - this.$refs.header.clientHeight + 'px';
+                    document.body.style.height = document.body.scrollHeight - heightToRemove + 'px';
                 } else {
                     document.body.style.height = '100%';
                 }
@@ -159,6 +161,7 @@
         }
     }
 </script>
+
 
 <style lang="scss">
     // Default styles
