@@ -3,7 +3,7 @@
 Gridsome and Vue.js build small portfolio site. Single page site built with a default layout and slot for the content to dynamically load.
 
 ## Running Locally
-Run an `npm install` and `gridsome develop` from inside the portfolio directory.
+CD into the portfolio directory and run an `npm install` and `gridsome develop` from inside the portfolio directory.
 
 ## Languages
 Languages are configured in individual JSON files, currently disabled, however, this can be renabled by uncommenting the relevant functions in the different pages. Each page listens for the 'langChanged' event. It then reads the language from the application storage and points to the relevant text in each JSON file.
