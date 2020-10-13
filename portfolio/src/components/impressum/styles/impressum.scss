@@ -6,7 +6,7 @@
   left: 0;
   z-index: 10;
   background: #FFF;
-  overflow: fixed;
+  overflow: hidden;
 
   .close {
     position: absolute;
@@ -47,9 +47,8 @@
     font-family: 'Nobel-Book', sans-serif;
 
     .rightSide {
-      padding-bottom: 100px;
       overflow: auto;
-      height: 100vh;
+      height: calc(100vh - 120px);
     }
 
     @media only screen and (min-width: 768px) {
