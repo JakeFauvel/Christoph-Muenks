@@ -39,4 +39,6 @@ Configured in gridsome.config.js - change to your own github.io page if it will 
 
 The form is using FormSpree, simply create your form and place the form URL in Contact.vue. This will post diretly to your form. Another service could be used and if paid for we could adda custom success message/page.
 
-```                <form class="contactForm" autocomplete="off" action="https://formspree.io/xoqpqogy" method="POST">```
+```                
+    <form class="contactForm" autocomplete="off" action="https://formspree.io/xoqpqogy" method="POST">```
+```
