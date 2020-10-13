@@ -9,6 +9,10 @@
   img {
     margin-bottom: 50px;
   }
+
+  .project-container:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .fade-enter-active, .fade-leave-active {

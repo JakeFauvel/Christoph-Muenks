@@ -114,11 +114,11 @@
 
             setBodyHeight() {
                 let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-                let heightToRemove = isSafari ? this.$refs.header.style.height : 0;
+                // let heightToRemove = isSafari ? this.$refs.header.style.height : 0;
                 document.body.style.height = '100%';
 
                 if (document.body.scrollHeight > window.innerHeight) {
-                    document.body.style.height = document.body.scrollHeight - heightToRemove + 'px';
+                    document.body.style.height = document.body.scrollHeight - this.$refs.header.style.height + 'px';
                 } else {
                     document.body.style.height = '100%';
                 }

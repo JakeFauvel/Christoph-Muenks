@@ -5,4 +5,8 @@
   width: 100%;
   font-family: 'Nobel', sans-serif;
   font-size: 24px;
+
+  .project-container:last-of-type {
+    margin-bottom: 0;
+  }
 }
