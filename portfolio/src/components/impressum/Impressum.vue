@@ -115,24 +115,7 @@
             CloseIcon
         },
 
-        data: function () {
-            return {
-                projectsLang: ProjectsLang,
-                activeLanguage: 'de',
-            }
-        },
-
-        mounted() {
-            // this.setLanguage();
-        },
-
         methods: {
-            setLanguage() {
-                if (localStorage.getItem("language") !== null) {
-                    this.activeLanguage = localStorage.getItem("language");
-                }
-            },
-
             overlayClose() {
                 // Dispatch a custom event to listen for
                 // the language change accross the site
