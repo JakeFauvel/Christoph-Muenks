@@ -11,7 +11,6 @@
 
         methods: {
             cookiesAccepted() {
-                console.log('cookiesAccepted!');
                 localStorage.setItem('cookiesAccepted', 'true');
 
                 let event = new CustomEvent("cookiesAccepted", {});
