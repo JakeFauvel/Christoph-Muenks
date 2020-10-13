@@ -84,7 +84,7 @@
             window.addEventListener('resize', this.setBodyHeight, {passive: true});
             window.addEventListener('impressumOverlayClosed', this.toggleOverlay, {passive: true});
 
-            if (document.body.offHeight > window.innerHeight) {
+            if (document.body.offsetHeight > window.innerHeight) {
                 let importantInfo = document.getElementById('importantInfo');
                 importantInfo.style.display = 'initial';
             }
@@ -105,7 +105,11 @@
 
             setInitialImportantInfoState() {
                 this.setBodyHeight();
-                if (document.body.scrollHeight === document.body.offsetHeight) this.$refs.footer.style.display = 'initial';
+                if (document.body.scrollHeight === document.body.offsetHeight) {
+                    this.$refs.footer.style.display = 'initial';
+                } else {
+                    this.$refs.footer.style.display = 'none';
+                }
             },
 
             setBodyHeight() {

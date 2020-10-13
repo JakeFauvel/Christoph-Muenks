@@ -12,11 +12,9 @@
             </div>
         </div>
 
-        <div class="content">
-                <div class="textTitle">
-                    <transition name="fade">
-                        <h2 class="projectHeader">{{ project.title }}</h2>
-                    </transition>
+        <div ref="content" class="content">
+                <div ref="textTitle" class="textTitle">
+                    <h2 class="projectHeader">{{ project.title }}</h2>
                 </div>
 
                 <div ref="imageContainer" id="imageContainer" class="imageContainer">
