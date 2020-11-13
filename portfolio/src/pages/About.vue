@@ -25,7 +25,7 @@
 
     export default {
         metaInfo: {
-            title: 'Christoph Münks - About'
+            title: ''
         },
 
         data: function () {

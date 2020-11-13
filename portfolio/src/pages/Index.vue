@@ -22,7 +22,7 @@
 
     export default {
         metaInfo: {
-            title: 'Christoph Münks - Blacksmith'
+            title: ''
         },
 
         components: {

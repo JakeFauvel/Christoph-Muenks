@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Christoph Münks - Blacksmith',
+  siteName: 'Christoph Münks',
   siteUrl: 'https://jakefauvel.github.io',
   pathPrefix: '/Christoph-Muenks',
   plugins: [

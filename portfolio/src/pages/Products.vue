@@ -21,7 +21,7 @@
 
     export default {
         metaInfo: {
-            title: 'Christoph Münks - Products'
+            title: ''
         },
 
         components: {

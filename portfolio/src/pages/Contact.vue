@@ -44,7 +44,7 @@
 
     export default {
         metaInfo: {
-            title: 'Christoph Münks - Contact'
+            title: ''
         },
 
         data: function () {
